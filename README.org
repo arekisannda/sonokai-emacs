@@ -1,0 +1,7 @@
+* sonokai-emacs
+
+Sonokai for Emacs based on https://github.com/sainnhe/sonokai
+
+** Preview
+[[./images/sonokai-theme-1.png]]
+[[./images/sonokai-theme-2.png]]
