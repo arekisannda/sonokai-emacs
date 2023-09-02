@@ -17,8 +17,8 @@
 ;; d-blue:  #354157 #2B3649 #5B6F92
 ;; d-green: #394634 #2F3B2B #6D8464
 
-(unless (>= emacs-major-version 24)
-  (error "The sonokai theme requires Emacs 24 or later!"))
+(unless (>= emacs-major-version 27)
+  (error "The sonokai theme requires Emacs 27 or later!"))
 
 (deftheme sonokai "The Sonokai colour theme")
 
@@ -267,6 +267,11 @@ Also affects 'linum-mode' background."
        ;; Adaptive colors
        (sonokai-256-foreground     sonokai-foreground)
        (sonokai-256-background     sonokai-background)
+       (sonokai-256-background-d   sonokai-background-d)
+       (sonokai-256-background-l   sonokai-background-l)
+       (sonokai-256-background-alt sonokai-background-alt)
+       (sonokai-256-bg-alt-d       sonokai-bg-alt-d)
+       (sonokai-256-bg-alt-l       sonokai-bg-alt-l)
        (sonokai-256-comments       sonokai-comments)
        (sonokai-256-emphasis       sonokai-emphasis)
        (sonokai-256-line-number    sonokai-line-number)
@@ -393,7 +398,29 @@ Also affects 'linum-mode' background."
       (,sonokai-256-class (:inherit font-lock-constant-face))))
 
    ;; general colouring
-   '(button ((t (:underline t))))
+   `(button ((t (:underline t))))
+
+   `(tab-bar
+     ((,sonokai-class (:inherit tab-bar
+				:background ,sonokai-background-d))
+      (,sonokai-256-class (:inherit tab-bar
+				    :background ,sonokai-256-background-d))))
+
+   `(tab-bar-tab
+     ((,sonokai-class (:inherit tab-bar-tab
+				:foreground ,sonokai-yellow
+				:background ,sonokai-background))
+      (,sonokai-256-class (:inherit tab-bar-tab
+				    :foreground ,sonokai-256-yellow
+				    :background ,sonokai-256-background))))
+
+   `(tab-bar-tab-inactive
+     ((,sonokai-class (:inherit tab-bar-tab-inactive
+				:foreground ,sonokai-foreground
+				:background ,sonokai-background-d))
+      (,sonokai-256-class (:inheirt tab-bar-tab-inactive
+				    :foreground ,sonokai-256-foreground
+				    :background ,sonokai-256-background-d))))
 
    `(default
       ((,sonokai-class (:foreground ,sonokai-foreground
