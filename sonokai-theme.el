@@ -2257,37 +2257,45 @@ Also affects 'linum-mode' background."
 
 
    ;; git-gutter
-   `(git-gutter:added
-     ((,sonokai-class (:background ,sonokai-green
-                                   :foreground ,sonokai-background
-                                   :inherit bold))
-      (,sonokai-256-class (:background ,sonokai-256-green
-                                        :foreground ,sonokai-256-background
-                                        :inherit bold))))
+   `(git-gutter:added 
+     ((,sonokai-class (:inherit default
+				:background ,sonokai-background
+				:foreground ,sonokai-green
+				:weight bold))
+      (,sonokai-256-class (:inherit default
+				    :background ,sonokai-256-background
+				    :foreground ,sonokai-256-green
+				    :weight bold))))
 
    `(git-gutter:deleted
-     ((,sonokai-class (:background ,sonokai-red
-                                   :foreground ,sonokai-background
-                                   :inherit bold))
-      (,sonokai-256-class (:background ,sonokai-256-red
-                                        :foreground ,sonokai-256-background
-                                        :inherit bold))))
+     ((,sonokai-class (:inherit default
+				:background ,sonokai-background
+				:foreground ,sonokai-red
+				:weight bold))
+      (,sonokai-256-class (:inherit default
+				    :background ,sonokai-256-background
+				    :foreground ,sonokai-256-red
+				    :weight bold))))
 
    `(git-gutter:modified
-     ((,sonokai-class (:background ,sonokai-blue
-                                   :foreground ,sonokai-background
-                                   :inherit bold))
-      (,sonokai-256-class (:background ,sonokai-256-blue
-                                        :foreground ,sonokai-256-background
-                                        :inherit bold))))
+     ((,sonokai-class (:inherit default
+				:background ,sonokai-background
+				:foreground ,sonokai-yellow
+				:weight bold))
+      (,sonokai-256-class (:inherit default
+				    :background ,sonokai-256-background
+				    :foreground ,sonokai-256-yellow
+				    :weight bold))))
 
    `(git-gutter:unchanged
-     ((,sonokai-class (:background ,sonokai-highlight-line
-                                   :foreground ,sonokai-background
-                                   :inherit bold))
-      (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-background
-                                        :inherit bold))))
+     ((,sonokai-class (:inherit default
+				:background ,sonokai-background
+				:foreground ,sonokai-highlight-line
+				:weight bold))
+      (,sonokai-256-class (:inherit default
+				    :background ,sonokai-256-background
+				    :foreground ,sonokai-256-highlight-line
+				    :weight bold))))
 
    ;; git-gutter-fr
    `(git-gutter-fr:added
@@ -2303,43 +2311,51 @@ Also affects 'linum-mode' background."
                                         :inherit bold))))
 
    `(git-gutter-fr:modified
-     ((,sonokai-class (:foreground ,sonokai-blue
+     ((,sonokai-class (:foreground ,sonokai-yellow
                                    :inherit bold))
-      (,sonokai-256-class (:foreground ,sonokai-256-blue
+      (,sonokai-256-class (:foreground ,sonokai-256-yellow
                                         :inherit bold))))
 
    ;; git-gutter+ and git-gutter+-fr
    `(git-gutter+-added
-     ((,sonokai-class (:background ,sonokai-green
-                                   :foreground ,sonokai-background
-                                   :inherit bold))
-      (,sonokai-256-class (:background ,sonokai-256-green
-                                        :foreground ,sonokai-256-background
-                                        :inherit bold))))
+     ((,sonokai-class (:inherit default
+				:background ,sonokai-background
+				:foreground ,sonokai-green
+				:weight bold))
+      (,sonokai-256-class (:inherit default
+				    :background ,sonokai-256-background
+				    :foreground ,sonokai-256-green
+				    :weight bold))))
 
    `(git-gutter+-deleted
-     ((,sonokai-class (:background ,sonokai-red
-                                   :foreground ,sonokai-background
-                                   :inherit bold))
-      (,sonokai-256-class (:background ,sonokai-256-red
-                                        :foreground ,sonokai-256-background
-                                        :inherit bold))))
+     ((,sonokai-class (:inherit default
+				:background ,sonokai-background
+				:foreground ,sonokai-red
+				:weight bold))
+      (,sonokai-256-class (:inherit default
+				    :background ,sonokai-256-background
+				    :foreground ,sonokai-256-red
+				    :weight bold))))
 
    `(git-gutter+-modified
-     ((,sonokai-class (:background ,sonokai-blue
-                                   :foreground ,sonokai-background
-                                   :inherit bold))
-      (,sonokai-256-class (:background ,sonokai-256-blue
-                                        :foreground ,sonokai-256-background
-                                        :inherit bold))))
+     ((,sonokai-class (:inherit default
+				:background ,sonokai-background
+				:foreground ,sonokai-yellow
+				:weight bold))
+      (,sonokai-256-class (:inherit default
+				    :background ,sonokai-256-background
+				    :foreground ,sonokai-256-yellow
+				    :weight bold))))
 
    `(git-gutter+-unchanged
-     ((,sonokai-class (:background ,sonokai-highlight-line
-                                   :foreground ,sonokai-background
-                                   :inherit bold))
-      (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-background
-                                        :inherit bold))))
+     ((,sonokai-class (:inherit default
+				:background ,sonokai-background
+				:foreground ,sonokai-highlight-line
+				:weight bold))
+      (,sonokai-256-class (:inherit default
+				    :background ,sonokai-256-background
+				    :foreground ,sonokai-256-highlight-line
+				    :weight bold))))
 
    `(git-gutter-fr+-added
      ((,sonokai-class (:foreground ,sonokai-green
@@ -2354,9 +2370,9 @@ Also affects 'linum-mode' background."
                                         :weight bold))))
 
    `(git-gutter-fr+-modified
-     ((,sonokai-class (:foreground ,sonokai-blue
+     ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight bold))
-      (,sonokai-256-class (:foreground ,sonokai-256-blue
+      (,sonokai-256-class (:foreground ,sonokai-256-yellow
                                         :weight bold))))
 
    ;; git-timemachine
@@ -3271,43 +3287,42 @@ Also affects 'linum-mode' background."
 
    ;; linum-mode
    `(linum
-     ((,sonokai-class (:foreground ,sonokai-line-number
-                                   :background ,sonokai-fringe-bg
-                                   :inherit default
-                                   :underline nil))
-      (,sonokai-256-class (:foreground ,sonokai-256-line-number
-                                        :background ,sonokai-256-fringe-bg
-                                        :inherit default
-                                        :underline nil))))
+     ((,sonokai-class (:inherit default
+				:foreground ,sonokai-line-number
+				:background ,sonokai-fringe-bg
+				:underline nil))
+      (,sonokai-256-class (:inherit default
+				    :foreground ,sonokai-256-line-number
+				    :background ,sonokai-256-fringe-bg
+				    :underline nil))))
 
    ;; line-number (>= Emacs26)
    `(line-number
      ((,sonokai-class (:foreground ,sonokai-line-number
-                                   :background ,sonokai-fringe-bg
-                                   :inherit default
-                                   :underline nil))
+				   :background ,sonokai-fringe-bg
+				   :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-line-number
-                                        :background ,sonokai-256-fringe-bg
-                                        :inherit default
-                                        :underline nil))))
+				       :background ,sonokai-256-fringe-bg
+				       :underline nil))))
+
    `(line-number-current-line
      ((,sonokai-class (:foreground ,sonokai-orange
-                                   :background ,sonokai-fringe-bg
-                                   :inherit default
-                                   :underline nil))
+				   :background ,sonokai-fringe-bg
+				   :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-orange
-                                        :background ,sonokai-256-fringe-bg
-                                        :inherit default
-                                        :underline nil))))
+				       :background ,sonokai-256-fringe-bg
+				       :underline nil))))
 
    ;; linum-relative-current-face
    `(linum-relative-current-face
-     ((,sonokai-class (:foreground ,sonokai-line-number
-                                   :background ,sonokai-highlight-line
-                                   :underline nil))
-      (,sonokai-256-class (:foreground ,sonokai-256-line-number
-                                        :background ,sonokai-256-highlight-line
-                                        :underline nil))))
+     ((,sonokai-class (:inherit default 
+				:foreground ,sonokai-orange
+				:background ,sonokai-fringe-bg
+				:underline nil))
+      (,sonokai-256-class (:inherit default
+				    :foreground ,sonokai-256-orange
+				    :background ,sonokai-256-fringe-bg
+				    :underline nil))))
 
    ;; lsp-mode
    `(lsp-ui-doc-header
