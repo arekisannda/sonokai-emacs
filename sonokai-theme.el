@@ -1717,16 +1717,22 @@ Also affects 'linum-mode' background."
 
    ;; ediff
    `(ediff-fine-diff-A
-     ((,sonokai-class (:background ,sonokai-diff-red-emphasis))
-      (,sonokai-256-class (:background ,sonokai-256-diff-red-emphasis))))
+     ((,sonokai-class (:foreground: sonokai-foreground,
+				    :background ,sonokai-diff-red-emphasis))
+      (,sonokai-256-class (:foreground: sonokai-foreground,
+					:background ,sonokai-256-diff-red-emphasis))))
 
    `(ediff-fine-diff-B
-     ((,sonokai-class (:background ,sonokai-diff-green-emphasis))
-      (,sonokai-256-class (:background ,sonokai-256-diff-green-emphasis))))
+     ((,sonokai-class (:foreground: sonokai-foreground,
+		       :background ,sonokai-diff-green-emphasis))
+      (,sonokai-256-class (:foreground: sonokai-foreground,
+			   :background ,sonokai-256-diff-green-emphasis))))
 
    `(ediff-fine-diff-C
-     ((,sonokai-class (:background ,sonokai-diff-blue-emphasis))
-      (,sonokai-256-class (:background ,sonokai-256-diff-blue-emphasis))))
+     ((,sonokai-class (:foreground: sonokai-foreground,
+		       :background ,sonokai-diff-blue-emphasis))
+      (,sonokai-256-class (:foreground: sonokai-foreground,
+			   :background ,sonokai-256-diff-blue-emphasis))))
 
    `(ediff-current-diff-A
      ((,sonokai-class (:background ,sonokai-diff-red-base))
