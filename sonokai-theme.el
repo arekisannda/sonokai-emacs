@@ -189,8 +189,8 @@ Also affects 'linum-mode' background."
        (sonokai-comments       sonokai-gray)
        (sonokai-emphasis       sonokai-white)
        (sonokai-line-number    sonokai-gray-d)
-       (sonokai-highlight      sonokai-background-alt)
-       (sonokai-highlight-alt  sonokai-bg-alt-l)
+       (sonokai-highlight      sonokai-bg-alt-l)
+       (sonokai-highlight-alt  sonokai-background-alt)
        (sonokai-highlight-line sonokai-bg-alt-d)
 
        ;; Adaptive higher/lower contrast accented colors
@@ -6288,7 +6288,7 @@ Also affects 'linum-mode' background."
 
    ;; pos-tip
    `(pos-tip-foreground-color ,sonokai-emphasis)
-   `(pos-tip-background-color ,sonokai-bg-alt-l)
+   `(pos-tip-background-color ,sonokai-bg-alt-d)
 
    ;; vc
    `(vc-annotate-color-map
