@@ -607,6 +607,52 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:background ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-background))))
 
+   ;; powerline-evil
+   `(powerline-evil-base-face
+     ((,sonokai-class (:foreground ,sonokai-foreground)))
+     (,sonokai-256-class (:foreground ,sonokai-256-foreground)))
+
+   `(powerline-evil-emacs-face
+     ((,sonokai-class (:inherit powerline-evil-base-face
+				:foreground ,sonokai-violet)))
+     ((,sonokai-256-class (:inherit powerline-evil-base-face
+				    :foreground ,sonokai-256-violet))))
+
+   `(powerline-evil-normal-face
+     ((,sonokai-class (:inherit powerline-evil-base-face
+				:foreground ,sonokai-blue)))
+     ((,sonokai-256-class (:inherit powerline-evil-base-face
+				    :foreground ,sonokai-256-blue))))
+
+   `(powerline-evil-insert-face
+     ((,sonokai-class (:inherit powerline-evil-base-face
+				:foreground ,sonokai-green)))
+     ((,sonokai-256-class (:inherit powerline-evil-base-face
+				    :foreground ,sonokai-256-green))))
+
+   `(powerline-evil-motion-face
+     ((,sonokai-class (:inherit powerline-evil-base-face
+				:foreground ,sonokai-magenta)))
+     ((,sonokai-256-class (:inherit powerline-evil-base-face
+				    :foreground ,sonokai-256-magenta))))
+
+   `(powerline-evil-visual-face
+     ((,sonokai-class (:inherit powerline-evil-base-face
+				:foreground ,sonokai-orange)))
+     ((,sonokai-256-class (:inherit powerline-evil-base-face
+				    :foreground ,sonokai-256-orange))))
+
+   `(powerline-evil-replace-face
+     ((,sonokai-class (:inherit powerline-evil-base-face
+				:foreground ,sonokai-red)))
+     ((,sonokai-256-class (:inherit powerline-evil-base-face
+				    :foreground ,sonokai-256-red))))
+
+   `(powerline-evil-operator-face
+     ((,sonokai-class (:inherit powerline-evil-base-face
+				:foreground ,sonokai-cyan)))
+     ((,sonokai-256-class (:inherit powerline-evil-base-face
+				    :foreground ,sonokai-256-cyan))))
    ;; header-line
    `(header-line
      ((,sonokai-class (:foreground ,sonokai-emphasis
