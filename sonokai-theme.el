@@ -1,5 +1,6 @@
 ;; Sonokai Palette
 ;;
+;;          reg     dim     bright  alt
 ;; yellow:  #E7C664 #BAA741 #FFDB52 #C4A64F
 ;; orange:  #F39660 #C2733D #FFB075
 ;; red:     #FC5D7C #C63958 #FF81A0 #FF6077
