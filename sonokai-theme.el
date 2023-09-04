@@ -419,7 +419,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:inherit tab-bar-tab-inactive
 				:foreground ,sonokai-foreground
 				:background ,sonokai-background-d))
-      (,sonokai-256-class (:inheirt tab-bar-tab-inactive
+      (,sonokai-256-class (:inherit tab-bar-tab-inactive
 				    :foreground ,sonokai-256-foreground
 				    :background ,sonokai-256-background-d))))
 
@@ -3316,7 +3316,7 @@ Also affects 'linum-mode' background."
 
    ;; linum-relative-current-face
    `(linum-relative-current-face
-     ((,sonokai-class (:inherit default 
+     ((,sonokai-class (:inherit default
 				:foreground ,sonokai-orange
 				:background ,sonokai-fringe-bg
 				:underline nil))
@@ -4895,8 +4895,8 @@ Also affects 'linum-mode' background."
       (,sonokai-256-class (:inherit secondary-selection))))
 
    `(realgud-line-number
-     ((,sonokai-class (:inerhit sonokai-line-number))
-      (,sonokai-256-class (:inerhit sonokai-line-number))))
+     ((,sonokai-class (:inherit sonokai-line-number))
+      (,sonokai-256-class (:inherit sonokai-line-number))))
 
    `(realgud-backtrace-number
      ((,sonokai-class (:foreground ,sonokai-yellow-d
