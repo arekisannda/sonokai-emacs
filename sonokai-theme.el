@@ -2310,7 +2310,7 @@ Also affects 'linum-mode' background."
 
 
    ;; git-gutter
-   `(git-gutter:added 
+   `(git-gutter:added
      ((,sonokai-class (:inherit default
 				:background ,sonokai-background
 				:foreground ,sonokai-green
@@ -5512,8 +5512,8 @@ Also affects 'linum-mode' background."
    ;; tooltip. (NOTE: This setting has no effect on the os widgets for me
    ;; zencoding uses this)
    `(tooltip
-     ((,sonokai-class (:background ,sonokai-yellow-hc
-                                   :foreground ,sonokai-background
+     ((,sonokai-class (:background ,sonokai-background-d
+                                   :foreground ,sonokai-emphasis
                                    :inherit ,sonokai-pitch))))
 
    ;; treemacs
@@ -6287,8 +6287,8 @@ Also affects 'linum-mode' background."
        (,sonokai-highlight-line . 100)))
 
    ;; pos-tip
-   `(pos-tip-foreground-color ,sonokai-background)
-   `(pos-tip-background-color ,sonokai-yellow-hc)
+   `(pos-tip-foreground-color ,sonokai-emphasis)
+   `(pos-tip-background-color ,sonokai-bg-alt-l)
 
    ;; vc
    `(vc-annotate-color-map
