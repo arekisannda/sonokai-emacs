@@ -270,6 +270,10 @@ Also affects 'linum-mode' background."
        (sonokai-256-green-l        sonokai-green-l)
        (sonokai-256-gray-d         sonokai-gray-d)
        (sonokai-256-gray-l         sonokai-gray-l)
+       (sonokai-256-black-d        sonokai-black-d)
+       (sonokai-256-black-l        sonokai-black-l)
+       (sonokai-256-white-d        sonokai-white-d)
+       (sonokai-256-white-l        sonokai-white-l)
 
        ;; Adaptive colors
        (sonokai-256-foreground     sonokai-foreground)
@@ -659,6 +663,78 @@ Also affects 'linum-mode' background."
 				:foreground ,sonokai-cyan)))
      ((,sonokai-256-class (:inherit powerline-evil-base-face
 				    :foreground ,sonokai-256-cyan))))
+
+   ;; telephone-line evil
+   `(telephone-line-evil
+     ((,sonokai-class (:inherit mode-line
+				:foreground ,sonokai-foreground))
+      (,sonokai-256-class (:inherit mode-line
+				    :foreground ,sonokai-256-foreground))))
+
+   `(telephone-line-evil-emacs
+     ((,sonokai-class (:inherit telephone-line-evil
+				:foreground ,sonokai-background
+				:background ,sonokai-violet))
+      (,sonokai-256-class (:inherit telephone-line-evil
+				    :foreground ,sonokai-256-background
+				    :background ,sonokai-256-violet))))
+
+   `(telephone-line-evil-normal
+     ((,sonokai-class (:inherit telephone-line-evil
+				:foreground ,sonokai-background
+				:background ,sonokai-blue))
+      (,sonokai-256-class (:inherit telephone-line-evil
+				    :foreground ,sonokai-256-background
+				    :background ,sonokai-256-blue))))
+
+   `(telephone-line-evil-insert
+     ((,sonokai-class (:inherit telephone-line-evil
+				:foreground ,sonokai-background
+				:background ,sonokai-green))
+      (,sonokai-256-class (:inherit telephone-line-evil
+				    :foreground ,sonokai-256-background
+				    :background ,sonokai-256-green))))
+
+   `(telephone-line-evil-replace
+     ((,sonokai-class (:inherit telephone-line-evil
+				:foreground ,sonokai-background
+				:background ,sonokai-red))
+      (,sonokai-256-class (:inherit telephone-line-evil
+				    :foreground ,sonokai-256-background
+				    :background ,sonokai-256-red))))
+
+   `(telephone-line-evil-visual
+     ((,sonokai-class (:inherit telephone-line-evil
+				:foreground ,sonokai-background
+				:background ,sonokai-orange))
+      (,sonokai-256-class (:inherit telephone-line-evil
+				    :foreground ,sonokai-256-background
+				    :background ,sonokai-256-orange))))
+
+   `(telephone-line-evil-operator
+     ((,sonokai-class (:inherit telephone-line-evil
+				:foreground ,sonokai-background
+				:background ,sonokai-cyan))
+      (,sonokai-256-class (:inherit telephone-line-evil
+				    :foreground ,sonokai-256-background
+				    :background ,sonokai-256-cyan))))
+
+   `(telephone-line-evil-motion
+     ((,sonokai-class (:inherit telephone-line-evil
+				:foreground ,sonokai-background
+				:background ,sonokai-magenta))
+      (,sonokai-256-class (:inherit telephone-line-evil
+				    :foreground ,sonokai-256-background
+				    :background ,sonokai-256-magenta))))
+
+   `(telephone-line-evil-god
+     ((,sonokai-class (:inherit telephone-line-evil
+				:foreground ,sonokai-background
+				:background ,sonokai-white-d))
+      (,sonokai-256-class (:inherit telephone-line-evil
+				    :foreground ,sonokai-256-background
+				    :background ,sonokai-256-white-d))))
+
    ;; header-line
    `(header-line
      ((,sonokai-class (:foreground ,sonokai-emphasis
@@ -5466,10 +5542,10 @@ Also affects 'linum-mode' background."
 
    ;; term
    `(term-color-black
-     ((,sonokai-class (:foreground ,sonokai-background
-                                   :background ,sonokai-highlight-line))
-      (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-highlight-line))))
+     ((,sonokai-class (:foreground ,sonokai-gray
+                                   :background ,sonokai-gray-d))
+      (,sonokai-256-class (:foreground ,sonokai-256-gray
+                                        :background ,sonokai-256-gray-d))))
 
    `(term-color-red
      ((,sonokai-class (:foreground ,sonokai-red
