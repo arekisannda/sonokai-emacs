@@ -151,10 +151,13 @@ Also affects 'linum-mode' background."
 
        ;; Functionality specific colors
        (sonokai-diff-blue-base      "#354157")
+       (sonokai-diff-blue-alt       "#2B3649")
        (sonokai-diff-blue-emphasis  "#5B6F92")
        (sonokai-diff-green-base     "#394634")
+       (sonokai-diff-green-alt      "#2F3B2B")
        (sonokai-diff-green-emphasis "#6D8464")
        (sonokai-diff-red-base       "#55393D")
+       (sonokai-diff-red-alt        "#482F32")
        (sonokai-diff-red-emphasis   "#906369")
 
        ;; Darker and lighter accented colors
@@ -228,10 +231,13 @@ Also affects 'linum-mode' background."
 
        ;; Functionality specific colors
        (sonokai-256-diff-blue-base      sonokai-diff-blue-base)
+       (sonokai-256-diff-blue-alt       sonokai-diff-blue-alt)
        (sonokai-256-diff-blue-emphasis  sonokai-diff-blue-emphasis)
        (sonokai-256-diff-green-base     sonokai-diff-green-base)
+       (sonokai-256-diff-green-alt      sonokai-diff-green-alt)
        (sonokai-256-diff-green-emphasis sonokai-diff-green-emphasis)
        (sonokai-256-diff-red-base       sonokai-diff-red-base)
+       (sonokai-256-diff-red-alt        sonokai-diff-red-alt)
        (sonokai-256-diff-red-emphasis   sonokai-diff-red-emphasis)
 
        ;; Primary colors
@@ -1673,22 +1679,22 @@ Also affects 'linum-mode' background."
                                         :weight bold))))
 
    `(diff-refine-added
-     ((,sonokai-class (:foreground ,sonokai-background
-                                   :background ,sonokai-green))
-      (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-green))))
+     ((,sonokai-class (:foreground ,sonokai-green
+                                   :background ,sonokai-diff-green-base))
+      (,sonokai-256-class (:foreground ,sonokai-256-green
+                                        :background ,sonokai-256-diff-green-base))))
 
    `(diff-refine-change
-     ((,sonokai-class (:foreground ,sonokai-background
-                                   :background ,sonokai-blue))
+     ((,sonokai-class (:foreground ,sonokai-blue
+                                   :background ,sonokai-diff-blue-base))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-blue))))
+                                        :background ,sonokai-256-diff-blue-base))))
 
    `(diff-refine-removed
-     ((,sonokai-class (:foreground ,sonokai-background
-                                   :background ,sonokai-red))
-      (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-red))))
+     ((,sonokai-class (:foreground ,sonokai-red
+                                   :background ,sonokai-diff-red-base))
+      (,sonokai-256-class (:foreground ,sonokai-256-red
+                                        :background ,sonokai-256-diff-red-base))))
 
    ;; diff-hl
    `(diff-hl-change
@@ -1717,70 +1723,76 @@ Also affects 'linum-mode' background."
 
    ;; ediff
    `(ediff-fine-diff-A
-     ((,sonokai-class (:foreground: sonokai-foreground,
+     ((,sonokai-class (:foreground ,sonokai-foreground
 				    :background ,sonokai-diff-red-emphasis))
-      (,sonokai-256-class (:foreground: sonokai-foreground,
+      (,sonokai-256-class (:foreground: ,sonokai-256-foreground
 					:background ,sonokai-256-diff-red-emphasis))))
 
    `(ediff-fine-diff-B
-     ((,sonokai-class (:foreground: sonokai-foreground,
-		       :background ,sonokai-diff-green-emphasis))
-      (,sonokai-256-class (:foreground: sonokai-foreground,
-			   :background ,sonokai-256-diff-green-emphasis))))
+     ((,sonokai-class (:foreground ,sonokai-foreground
+		       :background ,sonokai-diff-green-base))
+      (,sonokai-256-class (:foreground: sonokai-256-foreground,
+			   :background ,sonokai-256-diff-green-base))))
 
    `(ediff-fine-diff-C
-     ((,sonokai-class (:foreground: sonokai-foreground,
-		       :background ,sonokai-diff-blue-emphasis))
+     ((,sonokai-class (:foreground ,sonokai-foreground
+		       :background ,sonokai-diff-blue-base))
       (,sonokai-256-class (:foreground: sonokai-foreground,
-			   :background ,sonokai-256-diff-blue-emphasis))))
+			   :background ,sonokai-256-diff-blue-base))))
 
    `(ediff-current-diff-A
-     ((,sonokai-class (:background ,sonokai-diff-red-base))
-      (,sonokai-256-class (:background ,sonokai-256-diff-red-base))))
+     ((,sonokai-class (:foreground ,sonokai-foreground
+				   :background ,sonokai-diff-red-alt))
+      (,sonokai-256-class (:foreground ,sonokai-foreground
+				       :background ,sonokai-256-diff-red-alt))))
 
    `(ediff-current-diff-B
-     ((,sonokai-class (:background ,sonokai-diff-green-base))
-      (,sonokai-256-class (:background ,sonokai-256-diff-green-base))))
+     ((,sonokai-class (:foreground ,sonokai-foreground
+				   :background ,sonokai-diff-green-alt))
+      (,sonokai-256-class (:foreground ,sonokai-foreground
+				       :background ,sonokai-256-diff-green-alt))))
 
    `(ediff-current-diff-C
-     ((,sonokai-class (:background ,sonokai-diff-blue-base))
-      (,sonokai-256-class (:background ,sonokai-256-diff-blue-base))))
+     ((,sonokai-class (:foreground ,sonokai-foreground
+				   :background ,sonokai-diff-blue-alt))
+      (,sonokai-256-class (:foreground ,sonokai-foreground
+				       :background ,sonokai-256-diff-blue-alt))))
 
    `(ediff-even-diff-A
-     ((,sonokai-class (:background ,sonokai-comments
-                                   :foreground ,sonokai-foreground-lc ))
-      (,sonokai-256-class (:background ,sonokai-256-comments
-                                        :foreground ,sonokai-256-foreground-lc ))))
+     ((,sonokai-class (:background ,sonokai-background-alt
+                                   :foreground ,sonokai-foreground ))
+      (,sonokai-256-class (:background ,sonokai-256-background-alt
+                                        :foreground ,sonokai-256-foreground ))))
 
    `(ediff-odd-diff-A
-     ((,sonokai-class (:background ,sonokai-comments
-                                   :foreground ,sonokai-foreground-hc ))
-      (,sonokai-256-class (:background ,sonokai-256-comments
-                                        :foreground ,sonokai-256-foreground-hc ))))
+     ((,sonokai-class (:background ,sonokai-background-alt
+                                   :foreground ,sonokai-foreground ))
+      (,sonokai-256-class (:background ,sonokai-256-background-alt
+                                        :foreground ,sonokai-256-foreground ))))
 
    `(ediff-even-diff-B
-     ((,sonokai-class (:background ,sonokai-comments
-                                   :foreground ,sonokai-foreground-hc ))
-      (,sonokai-256-class (:background ,sonokai-256-comments
-                                        :foreground ,sonokai-256-foreground-hc ))))
+     ((,sonokai-class (:background ,sonokai-background-alt
+                                   :foreground ,sonokai-foreground ))
+      (,sonokai-256-class (:background ,sonokai-256-background-alt
+                                        :foreground ,sonokai-256-foreground ))))
 
    `(ediff-odd-diff-B
-     ((,sonokai-class (:background ,sonokai-comments
-                                   :foreground ,sonokai-foreground-lc ))
-      (,sonokai-256-class (:background ,sonokai-256-comments
-                                        :foreground ,sonokai-256-foreground-lc ))))
+     ((,sonokai-class (:background ,sonokai-background-alt
+                                   :foreground ,sonokai-foreground ))
+      (,sonokai-256-class (:background ,sonokai-256-background-alt
+                                        :foreground ,sonokai-256-foreground ))))
 
    `(ediff-even-diff-C
-     ((,sonokai-class (:background ,sonokai-comments
+     ((,sonokai-class (:background ,sonokai-background-alt
                                    :foreground ,sonokai-foreground ))
-      (,sonokai-256-class (:background ,sonokai-256-comments
+      (,sonokai-256-class (:background ,sonokai-256-background-alt
                                         :foreground ,sonokai-256-foreground ))))
 
    `(ediff-odd-diff-C
-     ((,sonokai-class (:background ,sonokai-comments
-                                   :foreground ,sonokai-background ))
-      (,sonokai-256-class (:background ,sonokai-256-comments
-                                        :foreground ,sonokai-256-background ))))
+     ((,sonokai-class (:background ,sonokai-background-alt
+                                   :foreground ,sonokai-foreground ))
+      (,sonokai-256-class (:background ,sonokai-256-background-alt
+                                        :foreground ,sonokai-256-foreground ))))
 
    ;; edts
    `(edts-face-error-line
