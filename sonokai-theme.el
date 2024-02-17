@@ -1,5 +1,7 @@
+;;; sonokai-theme.el --- Sonokai Theme  -*- lexical-binding: t; -*-
+;;; Commentary:
+
 ;; Sonokai Palette
-;;
 ;;          reg     dim     bright  alt
 ;; yellow:  #E7C664 #BAA741 #FFDB52 #C4A64F
 ;; orange:  #F39660 #C2733D #FFB075
@@ -9,7 +11,7 @@
 ;; green:   #9ED072 #7BAA56 #B8E08C #A7DF78
 ;; cyan:    #85D3F2 #5AA8D9 #A1E8FF
 ;; violet:  #B39DF3 #8A74D1 #D1BAFF
-;; grey:    #7F8490 #595E6B #9FA4AF
+;; gray:    #7F8490 #595E6B #9FA4AF
 ;; black:   #181819 #101010 #282828
 ;; white:   #E2E2E3 #BfBFBF #F0F0F0
 ;; bg:      #2C2E34 #222327 #33353F
@@ -18,10 +20,12 @@
 ;; d-blue:  #354157 #2B3649 #5B6F92
 ;; d-green: #394634 #2F3B2B #6D8464
 
+;;; Code:
+
 (unless (>= emacs-major-version 27)
   (error "The sonokai theme requires Emacs 27 or later!"))
 
-(deftheme sonokai "The Sonokai colour theme")
+(deftheme sonokai "The Sonokai colour theme.")
 
 (defgroup sonokai nil
   "Sonokai theme options.
@@ -72,72 +76,72 @@ Also affects 'linum-mode' background."
 
 ;; Primary colors
 (defcustom sonokai-yellow "#E7C664"
-  "Primary colors - yellow"
+  "Primary colors - yellow."
   :type 'string
   :group 'sonokai)
 
 (defcustom sonokai-orange "#F39660"
-  "Primary colors - orange"
+  "Primary colors - orange."
   :type 'string
   :group 'sonokai)
 
 (defcustom sonokai-red "#FC5D7C"
-  "Primary colors - red"
+  "Primary colors - red."
   :type 'string
   :group 'sonokai)
 
 (defcustom sonokai-magenta "#DC8CC3"
-  "Primary colors - magenta"
+  "Primary colors - magenta."
   :type 'string
   :group 'sonokai)
 
 (defcustom sonokai-blue "#76CCE0"
-  "Primary colors - blue"
+  "Primary colors - blue."
   :type 'string
   :group 'sonokai)
 
 (defcustom sonokai-green "#9ED072"
-  "Primary colors - green"
+  "Primary colors - green."
   :type 'string
   :group 'sonokai)
 
 (defcustom sonokai-cyan "#85D3F2"
-  "Primary colors - cyan"
+  "Primary colors - cyan."
   :type 'string
   :group 'sonokai)
 
 (defcustom sonokai-violet "#B39DF3"
-  "Primary colors - violet"
+  "Primary colors - violet."
   :type 'string
   :group 'sonokai)
 
 (defcustom sonokai-gray "#7F8490"
-  "Primary colors - gray"
+  "Primary colors - gray."
   :type 'string
   :group 'sonokai)
 
 (defcustom sonokai-white "#E2E2E3"
-  "Primary colors - white"
+  "Primary colors - white."
   :type 'string
   :group 'sonokai)
 
 (defcustom sonokai-black "#181819"
-  "Primary colors - black"
+  "Primary colors - black."
   :type 'string
   :group 'sonokai)
 
 (defcustom sonokai-foreground "#E2E2E3"
-  "Adaptive colors - foreground"
+  "Adaptive colors - foreground."
   :type 'string
   :group 'sonokai)
 
 (defcustom sonokai-background "#2C2E34"
-  "Adaptive colors - background"
+  "Adaptive colors - background."
   :type 'string
   :group 'sonokai)
 
 (defcustom sonokai-background-alt "#3B3E48"
-  "Adaptive colors - background alt"
+  "Adaptive colors - background alt."
   :type 'string
   :group 'sonokai)
 
@@ -326,7 +330,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-red
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :weight normal))))
+                                       :weight normal))))
 
    `(font-lock-comment-delimiter-face
      ((,sonokai-class (:foreground ,sonokai-comments))
@@ -356,13 +360,13 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-red
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :weight normal))))
+                                       :weight normal))))
 
    `(font-lock-negation-char-face
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(font-lock-preprocessor-face
      ((,sonokai-class (:foreground ,sonokai-red))
@@ -372,13 +376,13 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight normal))))
+                                       :weight normal))))
 
    `(font-lock-regexp-grouping-backslash
      ((,sonokai-class (:foreground ,sonokai-violet
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-violet
-                                        :weight normal))))
+                                       :weight normal))))
 
    `(font-lock-string-face
      ((,sonokai-class (:foreground ,sonokai-yellow))
@@ -388,7 +392,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :italic nil))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :italic nil))))
+                                       :italic nil))))
 
    `(font-lock-variable-name-face
      ((,sonokai-class (:foreground ,sonokai-orange))
@@ -400,9 +404,9 @@ Also affects 'linum-mode' background."
                                    :italic t
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-orange
-                                        :weight bold
-                                        :italic t
-                                        :underline t))))
+                                       :weight bold
+                                       :italic t
+                                       :underline t))))
 
    `(c-annotation-face
      ((,sonokai-class (:inherit font-lock-constant-face))
@@ -413,31 +417,31 @@ Also affects 'linum-mode' background."
 
    `(tab-bar
      ((,sonokai-class (:inherit tab-bar
-				:background ,sonokai-background-d))
+                                :background ,sonokai-background-d))
       (,sonokai-256-class (:inherit tab-bar
-				    :background ,sonokai-256-background-d))))
+                                    :background ,sonokai-256-background-d))))
 
    `(tab-bar-tab
      ((,sonokai-class (:inherit tab-bar-tab
-				:foreground ,sonokai-yellow
-				:background ,sonokai-background))
+                                :foreground ,sonokai-yellow
+                                :background ,sonokai-background))
       (,sonokai-256-class (:inherit tab-bar-tab
-				    :foreground ,sonokai-256-yellow
-				    :background ,sonokai-256-background))))
+                                    :foreground ,sonokai-256-yellow
+                                    :background ,sonokai-256-background))))
 
    `(tab-bar-tab-inactive
      ((,sonokai-class (:inherit tab-bar-tab-inactive
-				:foreground ,sonokai-foreground
-				:background ,sonokai-background-d))
+                                :foreground ,sonokai-foreground
+                                :background ,sonokai-background-d))
       (,sonokai-256-class (:inherit tab-bar-tab-inactive
-				    :foreground ,sonokai-256-foreground
-				    :background ,sonokai-256-background-d))))
+                                    :foreground ,sonokai-256-foreground
+                                    :background ,sonokai-256-background-d))))
 
    `(default
-      ((,sonokai-class (:foreground ,sonokai-foreground
-                                    :background ,sonokai-background))
-       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                         :background ,sonokai-256-background))))
+     ((,sonokai-class (:foreground ,sonokai-foreground
+                                   :background ,sonokai-background))
+      (,sonokai-256-class (:foreground ,sonokai-256-foreground
+                                       :background ,sonokai-256-background))))
 
    `(highlight
      ((,sonokai-class (:background ,sonokai-highlight))
@@ -447,19 +451,19 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:inherit highlight
                                 :background ,sonokai-highlight-alt))
       (,sonokai-256-class (:inherit highlight
-                                     :background ,sonokai-256-highlight-alt))))
+                                    :background ,sonokai-256-highlight-alt))))
 
    `(region
      ((,sonokai-class (:inherit highlight
                                 :background ,sonokai-highlight))
       (,sonokai-256-class (:inherit highlight
-                                     :background ,sonokai-256-highlight))))
+                                    :background ,sonokai-256-highlight))))
 
    `(secondary-selection
      ((,sonokai-class (:inherit region
                                 :background ,sonokai-highlight-alt))
       (,sonokai-256-class (:inherit region
-                                     :background ,sonokai-256-highlight-alt))))
+                                    :background ,sonokai-256-highlight-alt))))
 
    `(shadow
      ((,sonokai-class (:foreground ,sonokai-comments))
@@ -470,24 +474,24 @@ Also affects 'linum-mode' background."
                                    :foreground ,sonokai-background
                                    :weight bold))
       (,sonokai-256-class (:background ,sonokai-256-green
-                                        :foreground ,sonokai-256-background
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-background
+                                       :weight bold))))
 
    `(cursor
      ((,sonokai-class (:foreground ,sonokai-background
                                    :background ,sonokai-foreground
                                    :inverse-video t))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-foreground
-                                        :inverse-video t))))
+                                       :background ,sonokai-256-foreground
+                                       :inverse-video t))))
 
    `(mouse
      ((,sonokai-class (:foreground ,sonokai-background
                                    :background ,sonokai-foreground
                                    :inverse-video t))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-foreground
-                                        :inverse-video t))))
+                                       :background ,sonokai-256-foreground
+                                       :inverse-video t))))
 
    `(escape-glyph
      ((,sonokai-class (:foreground ,sonokai-comments))
@@ -501,23 +505,23 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-foreground
                                    :background ,sonokai-fringe-bg))
       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                        :background ,sonokai-256-fringe-bg))))
+                                       :background ,sonokai-256-fringe-bg))))
 
    `(link
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :underline t
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :underline t
-                                        :weight bold))))
+                                       :underline t
+                                       :weight bold))))
 
    `(link-visited
      ((,sonokai-class (:foreground ,sonokai-violet
                                    :underline t
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-violet
-                                        :underline t
-                                        :weight normal))))
+                                       :underline t
+                                       :weight normal))))
 
    `(success
      ((,sonokai-class (:foreground ,sonokai-green ))
@@ -535,13 +539,13 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-background
                                    :background ,sonokai-green))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-green))))
+                                       :background ,sonokai-256-green))))
 
    `(eval-sexp-fu-flash-error
      ((,sonokai-class (:foreground ,sonokai-background
                                    :background ,sonokai-red))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-red))))
+                                       :background ,sonokai-256-red))))
 
    `(trailing-whitespace
      ((,sonokai-class (:background ,sonokai-red))
@@ -555,7 +559,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-foreground
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(minibuffer-prompt
      ((,sonokai-class (:foreground ,sonokai-blue))
@@ -566,7 +570,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-green
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(mode-line
      ((,sonokai-class (:inverse-video unspecified
@@ -577,12 +581,12 @@ Also affects 'linum-mode' background."
                                                         :color ,sonokai-gray
                                                         :style unspecified)))
       (,sonokai-256-class (:inverse-video unspecified
-                                           :underline unspecified
-                                           :foreground ,sonokai-256-foreground
-                                           :background ,sonokai-256-background
-                                           :box (:line-width 1
-                                                             :color ,sonokai-256-highlight
-                                                             :style unspecified)))))
+                                          :underline unspecified
+                                          :foreground ,sonokai-256-foreground
+                                          :background ,sonokai-256-background
+                                          :box (:line-width 1
+                                                            :color ,sonokai-256-highlight
+                                                            :style unspecified)))))
 
    `(powerline-active1
      ((,sonokai-class (:background ,sonokai-gray-d))
@@ -602,12 +606,12 @@ Also affects 'linum-mode' background."
                                                         :color ,sonokai-gray
                                                         :style unspecified)))
       (,sonokai-256-class (:inverse-video unspecified
-                                           :underline unspecified
-                                           :foreground ,sonokai-256-comments
-                                           :background ,sonokai-256-background
-                                           :box (:line-width 1
-                                                             :color ,sonokai-256-gray
-                                                             :style unspecified)))))
+                                          :underline unspecified
+                                          :foreground ,sonokai-256-comments
+                                          :background ,sonokai-256-background
+                                          :box (:line-width 1
+                                                            :color ,sonokai-256-gray
+                                                            :style unspecified)))))
 
    `(powerline-inactive1
      ((,sonokai-class (:background ,sonokai-gray-d))
@@ -624,116 +628,116 @@ Also affects 'linum-mode' background."
 
    `(powerline-evil-emacs-face
      ((,sonokai-class (:inherit powerline-evil-base-face
-				:foreground ,sonokai-violet)))
+                                :foreground ,sonokai-violet)))
      ((,sonokai-256-class (:inherit powerline-evil-base-face
-				    :foreground ,sonokai-256-violet))))
+                                    :foreground ,sonokai-256-violet))))
 
    `(powerline-evil-normal-face
      ((,sonokai-class (:inherit powerline-evil-base-face
-				:foreground ,sonokai-blue)))
+                                :foreground ,sonokai-blue)))
      ((,sonokai-256-class (:inherit powerline-evil-base-face
-				    :foreground ,sonokai-256-blue))))
+                                    :foreground ,sonokai-256-blue))))
 
    `(powerline-evil-insert-face
      ((,sonokai-class (:inherit powerline-evil-base-face
-				:foreground ,sonokai-green)))
+                                :foreground ,sonokai-green)))
      ((,sonokai-256-class (:inherit powerline-evil-base-face
-				    :foreground ,sonokai-256-green))))
+                                    :foreground ,sonokai-256-green))))
 
    `(powerline-evil-motion-face
      ((,sonokai-class (:inherit powerline-evil-base-face
-				:foreground ,sonokai-magenta)))
+                                :foreground ,sonokai-magenta)))
      ((,sonokai-256-class (:inherit powerline-evil-base-face
-				    :foreground ,sonokai-256-magenta))))
+                                    :foreground ,sonokai-256-magenta))))
 
    `(powerline-evil-visual-face
      ((,sonokai-class (:inherit powerline-evil-base-face
-				:foreground ,sonokai-orange)))
+                                :foreground ,sonokai-orange)))
      ((,sonokai-256-class (:inherit powerline-evil-base-face
-				    :foreground ,sonokai-256-orange))))
+                                    :foreground ,sonokai-256-orange))))
 
    `(powerline-evil-replace-face
      ((,sonokai-class (:inherit powerline-evil-base-face
-				:foreground ,sonokai-red)))
+                                :foreground ,sonokai-red)))
      ((,sonokai-256-class (:inherit powerline-evil-base-face
-				    :foreground ,sonokai-256-red))))
+                                    :foreground ,sonokai-256-red))))
 
    `(powerline-evil-operator-face
      ((,sonokai-class (:inherit powerline-evil-base-face
-				:foreground ,sonokai-cyan)))
+                                :foreground ,sonokai-cyan)))
      ((,sonokai-256-class (:inherit powerline-evil-base-face
-				    :foreground ,sonokai-256-cyan))))
+                                    :foreground ,sonokai-256-cyan))))
 
    ;; telephone-line evil
    `(telephone-line-evil
      ((,sonokai-class (:inherit mode-line
-				:foreground ,sonokai-foreground))
+                                :foreground ,sonokai-foreground))
       (,sonokai-256-class (:inherit mode-line
-				    :foreground ,sonokai-256-foreground))))
+                                    :foreground ,sonokai-256-foreground))))
 
    `(telephone-line-evil-emacs
      ((,sonokai-class (:inherit telephone-line-evil
-				:foreground ,sonokai-background
-				:background ,sonokai-violet))
+                                :foreground ,sonokai-background
+                                :background ,sonokai-violet))
       (,sonokai-256-class (:inherit telephone-line-evil
-				    :foreground ,sonokai-256-background
-				    :background ,sonokai-256-violet))))
+                                    :foreground ,sonokai-256-background
+                                    :background ,sonokai-256-violet))))
 
    `(telephone-line-evil-normal
      ((,sonokai-class (:inherit telephone-line-evil
-				:foreground ,sonokai-background
-				:background ,sonokai-blue))
+                                :foreground ,sonokai-background
+                                :background ,sonokai-blue))
       (,sonokai-256-class (:inherit telephone-line-evil
-				    :foreground ,sonokai-256-background
-				    :background ,sonokai-256-blue))))
+                                    :foreground ,sonokai-256-background
+                                    :background ,sonokai-256-blue))))
 
    `(telephone-line-evil-insert
      ((,sonokai-class (:inherit telephone-line-evil
-				:foreground ,sonokai-background
-				:background ,sonokai-green))
+                                :foreground ,sonokai-background
+                                :background ,sonokai-green))
       (,sonokai-256-class (:inherit telephone-line-evil
-				    :foreground ,sonokai-256-background
-				    :background ,sonokai-256-green))))
+                                    :foreground ,sonokai-256-background
+                                    :background ,sonokai-256-green))))
 
    `(telephone-line-evil-replace
      ((,sonokai-class (:inherit telephone-line-evil
-				:foreground ,sonokai-background
-				:background ,sonokai-red))
+                                :foreground ,sonokai-background
+                                :background ,sonokai-red))
       (,sonokai-256-class (:inherit telephone-line-evil
-				    :foreground ,sonokai-256-background
-				    :background ,sonokai-256-red))))
+                                    :foreground ,sonokai-256-background
+                                    :background ,sonokai-256-red))))
 
    `(telephone-line-evil-visual
      ((,sonokai-class (:inherit telephone-line-evil
-				:foreground ,sonokai-background
-				:background ,sonokai-orange))
+                                :foreground ,sonokai-background
+                                :background ,sonokai-orange))
       (,sonokai-256-class (:inherit telephone-line-evil
-				    :foreground ,sonokai-256-background
-				    :background ,sonokai-256-orange))))
+                                    :foreground ,sonokai-256-background
+                                    :background ,sonokai-256-orange))))
 
    `(telephone-line-evil-operator
      ((,sonokai-class (:inherit telephone-line-evil
-				:foreground ,sonokai-background
-				:background ,sonokai-cyan))
+                                :foreground ,sonokai-background
+                                :background ,sonokai-cyan))
       (,sonokai-256-class (:inherit telephone-line-evil
-				    :foreground ,sonokai-256-background
-				    :background ,sonokai-256-cyan))))
+                                    :foreground ,sonokai-256-background
+                                    :background ,sonokai-256-cyan))))
 
    `(telephone-line-evil-motion
      ((,sonokai-class (:inherit telephone-line-evil
-				:foreground ,sonokai-background
-				:background ,sonokai-magenta))
+                                :foreground ,sonokai-background
+                                :background ,sonokai-magenta))
       (,sonokai-256-class (:inherit telephone-line-evil
-				    :foreground ,sonokai-256-background
-				    :background ,sonokai-256-magenta))))
+                                    :foreground ,sonokai-256-background
+                                    :background ,sonokai-256-magenta))))
 
    `(telephone-line-evil-god
      ((,sonokai-class (:inherit telephone-line-evil
-				:foreground ,sonokai-background
-				:background ,sonokai-white-d))
+                                :foreground ,sonokai-background
+                                :background ,sonokai-white-d))
       (,sonokai-256-class (:inherit telephone-line-evil
-				    :foreground ,sonokai-256-background
-				    :background ,sonokai-256-white-d))))
+                                    :foreground ,sonokai-256-background
+                                    :background ,sonokai-256-white-d))))
 
    ;; header-line
    `(header-line
@@ -743,17 +747,17 @@ Also affects 'linum-mode' background."
                                                 :line-width 1
                                                 :style unspecified)))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :background ,sonokai-256-highlight
-                                        :box (:color ,sonokai-256-gray
-                                                     :line-width 1
-                                                     :style unspecified)))))
+                                       :background ,sonokai-256-highlight
+                                       :box (:color ,sonokai-256-gray
+                                                    :line-width 1
+                                                    :style unspecified)))))
 
    ;; cua
    `(cua-global-mark
      ((,sonokai-class (:background ,sonokai-yellow
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-yellow
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(cua-rectangle
      ((,sonokai-class (:inherit region))
@@ -782,8 +786,8 @@ Also affects 'linum-mode' background."
                                    :background ,sonokai-background
                                    :inherit bold))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :background ,sonokai-256-background
-                                        :inherit bold))))
+                                       :background ,sonokai-256-background
+                                       :inherit bold))))
 
    `(dired-ignored
      ((,sonokai-class (:inherit shadow))
@@ -793,83 +797,83 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-green
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(dired-marked
      ((,sonokai-class (:foreground ,sonokai-violet
                                    :inherit bold))
       (,sonokai-256-class (:foreground ,sonokai-256-violet
-                                        :inherit bold))))
+                                       :inherit bold))))
 
    `(dired-perm-write
      ((,sonokai-class (:foreground ,sonokai-foreground
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                        :underline t))))
+                                       :underline t))))
 
    `(dired-symlink
      ((,sonokai-class (:foreground ,sonokai-cyan
                                    :slant italic))
       (,sonokai-256-class (:foreground ,sonokai-256-cyan
-                                        :slant italic))))
+                                       :slant italic))))
 
    `(dired-warning
      ((,sonokai-class (:foreground ,sonokai-orange
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-orange
-                                        :underline t))))
+                                       :underline t))))
 
    ;; dropdown
    `(dropdown-list-face
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-blue))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-blue))))
+                                       :foreground ,sonokai-256-blue))))
 
    `(dropdown-list-selection-face
      ((,sonokai-class (:background ,sonokai-green
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-green
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    ;; ecb
    `(ecb-default-highlight-face
      ((,sonokai-class (:background ,sonokai-blue
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-blue
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(ecb-history-bucket-node-dir-soure-path-face
      ((,sonokai-class (:inherit ecb-history-bucket-node-face
                                 :foreground ,sonokai-yellow))
       (,sonokai-256-class (:inherit ecb-history-bucket-node-face
-                                     :foreground ,sonokai-256-yellow))))
+                                    :foreground ,sonokai-256-yellow))))
 
    `(ecb-source-in-directories-buffer-face
      ((,sonokai-class (:inherit ecb-directories-general-face
                                 :foreground ,sonokai-foreground))
       (,sonokai-256-class (:inherit ecb-directories-general-face
-                                     :foreground ,sonokai-256-foreground))))
+                                    :foreground ,sonokai-256-foreground))))
 
    `(ecb-history-dead-buffer-face
      ((,sonokai-class (:inherit ecb-history-general-face
                                 :foreground ,sonokai-comments))
       (,sonokai-256-class (:inherit ecb-history-general-face
-                                     :foreground ,sonokai-256-comments))))
+                                    :foreground ,sonokai-256-comments))))
 
    `(ecb-directory-not-accessible-face
      ((,sonokai-class (:inherit ecb-directories-general-face
                                 :foreground ,sonokai-comments))
       (,sonokai-256-class (:inherit ecb-directories-general-face
-                                     :foreground ,sonokai-256-comments))))
+                                    :foreground ,sonokai-256-comments))))
 
    `(ecb-bucket-node-face
      ((,sonokai-class (:inherit ecb-default-general-face
                                 :weight normal
                                 :foreground ,sonokai-blue))
       (,sonokai-256-class (:inherit ecb-default-general-face
-                                     :weight normal
-                                     :foreground ,sonokai-256-blue))))
+                                    :weight normal
+                                    :foreground ,sonokai-256-blue))))
 
    `(ecb-tag-header-face
      ((,sonokai-class (:background ,sonokai-highlight-line))
@@ -879,19 +883,19 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:inherit ecb-analyse-general-face
                                 :foreground ,sonokai-green))
       (,sonokai-256-class (:inherit ecb-analyse-general-face
-                                     :foreground ,sonokai-256-green))))
+                                    :foreground ,sonokai-256-green))))
 
    `(ecb-directories-general-face
      ((,sonokai-class (:inherit ecb-default-general-face
                                 :height 1.0))
       (,sonokai-256-class (:inherit ecb-default-general-face
-                                     :height 1.0))))
+                                    :height 1.0))))
 
    `(ecb-method-non-semantic-face
      ((,sonokai-class (:inherit ecb-methods-general-face
                                 :foreground ,sonokai-cyan))
       (,sonokai-256-class (:inherit ecb-methods-general-face
-                                     :foreground ,sonokai-256-cyan))))
+                                    :foreground ,sonokai-256-cyan))))
 
    `(ecb-mode-line-prefix-face
      ((,sonokai-class (:foreground ,sonokai-green))
@@ -902,8 +906,8 @@ Also affects 'linum-mode' background."
                                 :foreground ,sonokai-gray
                                 :height 1.0))
       (,sonokai-256-class (:inherit ecb-default-general-face
-                                     :foreground ,sonokai-256-gray
-                                     :height 1.0))))
+                                    :foreground ,sonokai-256-gray
+                                    :height 1.0))))
 
    ;; ee
    `(ee-bookmarked
@@ -926,7 +930,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-magenta
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-magenta
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(ee-omitted
      ((,sonokai-class (:foreground ,sonokai-comments))
@@ -946,8 +950,8 @@ Also affects 'linum-mode' background."
                                    :weight bold
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :weight bold
-                                        :underline t))))
+                                       :weight bold
+                                       :underline t))))
 
    `(grep-hit-face
      ((,sonokai-class (:foreground ,sonokai-orange))
@@ -957,7 +961,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-green
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :weight bold))))
+                                       :weight bold))))
 
    ;; isearch
    `(isearch
@@ -965,8 +969,8 @@ Also affects 'linum-mode' background."
                                 :foreground ,sonokai-background
                                 :background ,sonokai-yellow))
       (,sonokai-256-class (:inherit region
-                                     :foreground ,sonokai-256-background
-                                     :background ,sonokai-256-yellow))))
+                                    :foreground ,sonokai-256-background
+                                    :background ,sonokai-256-yellow))))
 
    `(isearch-fail
      ((,sonokai-class (:inherit isearch
@@ -974,9 +978,9 @@ Also affects 'linum-mode' background."
                                 :background ,sonokai-background
                                 :bold t))
       (,sonokai-256-class (:inherit isearch
-                                     :foreground ,sonokai-256-red
-                                     :background ,sonokai-256-background
-                                     :bold t))))
+                                    :foreground ,sonokai-256-red
+                                    :background ,sonokai-256-background
+                                    :bold t))))
 
 
    ;; ace-jump-mode
@@ -985,8 +989,8 @@ Also affects 'linum-mode' background."
                                    :background ,sonokai-background
                                    :inverse-video nil))
       (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                        :background ,sonokai-256-background
-                                        :inverse-video nil))))
+                                       :background ,sonokai-256-background
+                                       :inverse-video nil))))
 
    `(ace-jump-face-foreground
      ((,sonokai-class (:foreground ,sonokai-yellow
@@ -994,16 +998,16 @@ Also affects 'linum-mode' background."
                                    :inverse-video nil
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :background ,sonokai-256-background
-                                        :inverse-video nil
-                                        :weight bold))))
+                                       :background ,sonokai-256-background
+                                       :inverse-video nil
+                                       :weight bold))))
 
    ;; auctex
    `(font-latex-bold-face
      ((,sonokai-class (:inherit bold
                                 :foreground ,sonokai-emphasis))
       (,sonokai-256-class (:inherit bold
-                                     :foreground ,sonokai-256-emphasis))))
+                                    :foreground ,sonokai-256-emphasis))))
 
    `(font-latex-doctex-documentation-face
      ((,sonokai-class (:background unspecified))
@@ -1031,39 +1035,39 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:inherit font-latex-sectioning-1-face
                                 :height ,sonokai-height-plus-1))
       (,sonokai-256-class (:inherit font-latex-sectioning-1-face
-                                     :height ,sonokai-height-plus-1))))
+                                    :height ,sonokai-height-plus-1))))
 
    `(font-latex-sectioning-1-face
      ((,sonokai-class (:inherit font-latex-sectioning-2-face
                                 :height ,sonokai-height-plus-1))
       (,sonokai-256-class (:inherit font-latex-sectioning-2-face
-                                     :height ,sonokai-height-plus-1))))
+                                    :height ,sonokai-height-plus-1))))
 
    `(font-latex-sectioning-2-face
      ((,sonokai-class (:inherit font-latex-sectioning-3-face
                                 :height ,sonokai-height-plus-1))
       (,sonokai-256-class (:inherit font-latex-sectioning-3-face
-                                     :height ,sonokai-height-plus-1))))
+                                    :height ,sonokai-height-plus-1))))
 
    `(font-latex-sectioning-3-face
      ((,sonokai-class (:inherit font-latex-sectioning-4-face
                                 :height ,sonokai-height-plus-1))
       (,sonokai-256-class (:inherit font-latex-sectioning-4-face
-                                     :height ,sonokai-height-plus-1))))
+                                    :height ,sonokai-height-plus-1))))
 
    `(font-latex-sectioning-4-face
      ((,sonokai-class (:inherit font-latex-sectioning-5-face
                                 :height ,sonokai-height-plus-1))
       (,sonokai-256-class (:inherit font-latex-sectioning-5-face
-                                     :height ,sonokai-height-plus-1))))
+                                    :height ,sonokai-height-plus-1))))
 
    `(font-latex-sectioning-5-face
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :foreground ,sonokai-yellow
                                 :weight bold))
       (,sonokai-256-class (:inherit ,sonokai-pitch :
-                                     foreground ,sonokai-256-yellow
-                                     :weight bold))))
+                                    foreground ,sonokai-256-yellow
+                                    :weight bold))))
 
    `(font-latex-sedate-face
      ((,sonokai-class (:foreground ,sonokai-emphasis))
@@ -1074,8 +1078,8 @@ Also affects 'linum-mode' background."
                                 :weight bold
                                 :height ,sonokai-height-plus-3))
       (,sonokai-256-class (:inherit (,sonokai-pitch font-lock-type-face)
-                                     :weight bold
-                                     :height ,sonokai-height-plus-3))))
+                                    :weight bold
+                                    :height ,sonokai-height-plus-3))))
 
    `(font-latex-string-face
      ((,sonokai-class (:foreground ,sonokai-cyan))
@@ -1094,106 +1098,106 @@ Also affects 'linum-mode' background."
                                 :foreground ,sonokai-foreground
                                 :slant italic))
       (,sonokai-256-class (:inherit fixed-pitch
-                                     :foreground ,sonokai-256-foreground
-                                     :slant italic))))
+                                    :foreground ,sonokai-256-foreground
+                                    :slant italic))))
 
    `(font-latex-warning-face
      ((,sonokai-class (:inherit bold
                                 :foreground ,sonokai-orange))
       (,sonokai-256-class (:inherit bold
-                                     :foreground ,sonokai-256-orange))))
+                                    :foreground ,sonokai-256-orange))))
 
    ;; auto-complete
    `(ac-candidate-face
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-blue))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-blue))))
+                                       :foreground ,sonokai-256-blue))))
 
    `(ac-selection-face
      ((,sonokai-class (:background ,sonokai-blue
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-blue
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(ac-candidate-mouse-face
      ((,sonokai-class (:background ,sonokai-blue
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-blue
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(ac-completion-face
      ((,sonokai-class (:foreground ,sonokai-emphasis
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :underline t))))
+                                       :underline t))))
 
    `(ac-gtags-candidate-face
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-blue))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-blue))))
+                                       :foreground ,sonokai-256-blue))))
 
    `(ac-gtags-selection-face
      ((,sonokai-class (:background ,sonokai-blue
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-blue
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(ac-yasnippet-candidate-face
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-yellow))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-yellow))))
+                                       :foreground ,sonokai-256-yellow))))
 
    `(ac-yasnippet-selection-face
      ((,sonokai-class (:background ,sonokai-yellow
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-yellow
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    ;; auto highlight symbol
    `(ahs-definition-face
      ((,sonokai-class (:foreground ,sonokai-background
                                    :background ,sonokai-blue))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-blue))))
+                                       :background ,sonokai-256-blue))))
 
    `(ahs-edit-mode-face
      ((,sonokai-class (:foreground ,sonokai-background
                                    :background ,sonokai-highlight))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-highlight))))
+                                       :background ,sonokai-256-highlight))))
 
    `(ahs-face
      ((,sonokai-class (:foreground ,sonokai-background
                                    :background ,sonokai-yellow))
       (,sonokai-256-class (:foreground ,sonokai-256-magenta
-                                        :background unspecified))))
+                                       :background unspecified))))
 
    `(ahs-plugin-bod-face
      ((,sonokai-class (:foreground ,sonokai-background
                                    :background ,sonokai-violet ))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-cyan ))))
+                                       :background ,sonokai-256-cyan ))))
 
    `(ahs-plugin-defalt-face
      ((,sonokai-class (:foreground ,sonokai-background
                                    :background ,sonokai-orange))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-orange))))
+                                       :background ,sonokai-256-orange))))
 
    `(ahs-plugin-whole-buffer-face
      ((,sonokai-class (:foreground ,sonokai-background
                                    :background ,sonokai-green))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-green))))
+                                       :background ,sonokai-256-green))))
 
    `(ahs-warning-face
      ((,sonokai-class (:foreground ,sonokai-red
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :weight bold))))
+                                       :weight bold))))
 
    ;; android mode
    `(android-mode-debug-face
@@ -1204,7 +1208,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-orange
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-orange
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(android-mode-info-face
      ((,sonokai-class (:foreground ,sonokai-foreground))
@@ -1223,32 +1227,32 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-violet
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-violet
-                                        :weight bold))))
+                                       :weight bold))))
 
    ;; bm
    `(bm-face
      ((,sonokai-class (:background ,sonokai-yellow-lc
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-yellow-lc
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(bm-fringe-face
      ((,sonokai-class (:background ,sonokai-yellow-lc
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-yellow-lc
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(bm-fringe-persistent-face
      ((,sonokai-class (:background ,sonokai-green-lc
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-green-lc
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(bm-persistent-face
      ((,sonokai-class (:background ,sonokai-green-lc
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-green-lc
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    ;; calfw
    `(cfw:face-day-title
@@ -1259,7 +1263,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:inherit cfw:face-day-title
                                 :foreground ,sonokai-yellow))
       (,sonokai-256-class (:inherit cfw:face-day-title
-                                     :foreground ,sonokai-256-yellow))))
+                                    :foreground ,sonokai-256-yellow))))
 
    `(cfw:face-default-content
      ((,sonokai-class (:foreground ,sonokai-green))
@@ -1269,13 +1273,13 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:inherit cfw:face-day-title
                                 :weight bold))
       (,sonokai-256-class (:inherit cfw:face-day-title
-                                     :weight bold))))
+                                    :weight bold))))
 
    `(cfw:face-disable
      ((,sonokai-class (:inherit cfw:face-day-title
                                 :foreground ,sonokai-comments))
       (,sonokai-256-class (:inherit cfw:face-day-title
-                                     :foreground ,sonokai-256-comments))))
+                                    :foreground ,sonokai-256-comments))))
 
    `(cfw:face-grid
      ((,sonokai-class (:foreground ,sonokai-comments))
@@ -1286,16 +1290,16 @@ Also affects 'linum-mode' background."
                                    :background ,sonokai-blue-lc
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-blue-hc
-                                        :background ,sonokai-256-blue-lc
-                                        :weight bold))))
+                                       :background ,sonokai-256-blue-lc
+                                       :weight bold))))
 
    `(cfw:face-holiday
      ((,sonokai-class (:background nil
                                    :foreground ,sonokai-red
                                    :weight bold))
       (,sonokai-256-class (:background nil
-                                        :foreground ,sonokai-256-red
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-red
+                                       :weight bold))))
 
    `(cfw:face-periods
      ((,sonokai-class (:foreground ,sonokai-magenta))
@@ -1305,21 +1309,21 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:background ,sonokai-magenta-lc
                                    :foreground ,sonokai-magenta-hc))
       (,sonokai-256-class (:background ,sonokai-256-magenta-lc
-                                        :foreground ,sonokai-256-magenta-hc))))
+                                       :foreground ,sonokai-256-magenta-hc))))
 
    `(cfw:face-saturday
      ((,sonokai-class (:foreground ,sonokai-cyan-hc
                                    :background ,sonokai-cyan-lc))
       (,sonokai-256-class (:foreground ,sonokai-256-cyan-hc
-                                        :background ,sonokai-256-cyan-lc))))
+                                       :background ,sonokai-256-cyan-lc))))
 
    `(cfw:face-sunday
      ((,sonokai-class (:foreground ,sonokai-red-hc
                                    :background ,sonokai-red-lc
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-red-hc
-                                        :background ,sonokai-256-red-lc
-                                        :weight bold))))
+                                       :background ,sonokai-256-red-lc
+                                       :weight bold))))
 
    `(cfw:face-title
      ((,sonokai-class (:inherit ,sonokai-pitch
@@ -1327,47 +1331,47 @@ Also affects 'linum-mode' background."
                                 :weight bold
                                 :height ,sonokai-height-plus-4))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :foreground ,sonokai-256-yellow
-                                     :weight bold
-                                     :height ,sonokai-height-plus-4))))
+                                    :foreground ,sonokai-256-yellow
+                                    :weight bold
+                                    :height ,sonokai-height-plus-4))))
 
    `(cfw:face-today
      ((,sonokai-class (:weight bold
                                :background ,sonokai-highlight-line
                                :foreground nil))
       (,sonokai-256-class (:weight bold
-                                    :background ,sonokai-256-highlight-line
-                                    :foreground nil))))
+                                   :background ,sonokai-256-highlight-line
+                                   :foreground nil))))
 
    `(cfw:face-today-title
      ((,sonokai-class (:background ,sonokai-yellow-lc
                                    :foreground ,sonokai-yellow-hc
                                    :weight bold))
       (,sonokai-256-class (:background ,sonokai-256-yellow-lc
-                                        :foreground ,sonokai-256-yellow-hc
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-yellow-hc
+                                       :weight bold))))
 
    `(cfw:face-toolbar
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-foreground))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-foreground))))
+                                       :foreground ,sonokai-256-foreground))))
 
    `(cfw:face-toolbar-button-off
      ((,sonokai-class (:background ,sonokai-yellow-lc
                                    :foreground ,sonokai-yellow-hc
                                    :weight bold))
       (,sonokai-256-class (:background ,sonokai-256-yellow-lc
-                                        :foreground ,sonokai-256-yellow-hc
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-yellow-hc
+                                       :weight bold))))
 
    `(cfw:face-toolbar-button-on
      ((,sonokai-class (:background ,sonokai-yellow-hc
                                    :foreground ,sonokai-yellow-lc
                                    :weight bold))
       (,sonokai-256-class (:background ,sonokai-256-yellow-hc
-                                        :foreground ,sonokai-256-yellow-lc
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-yellow-lc
+                                       :weight bold))))
 
    ;; cider
    `(cider-enlightened
@@ -1375,8 +1379,8 @@ Also affects 'linum-mode' background."
                                    :background nil
                                    :box (:color ,sonokai-yellow :line-width -1 :style nil)))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :background nil
-                                        :box (:color ,sonokai-256-yellow :line-width -1 :style nil))) ))
+                                       :background nil
+                                       :box (:color ,sonokai-256-yellow :line-width -1 :style nil))) ))
 
    `(cider-enlightened-local
      ((,sonokai-class (:foreground ,sonokai-yellow))
@@ -1387,34 +1391,34 @@ Also affects 'linum-mode' background."
                                    :background nil
                                    :box (:color ,sonokai-violet :line-width -1 :style nil)))
       (,sonokai-256-class (:foreground ,sonokai-256-violet
-                                        :background nil
-                                        :box (:color ,sonokai-256-violet :line-width -1 :style nil)))))
+                                       :background nil
+                                       :box (:color ,sonokai-256-violet :line-width -1 :style nil)))))
 
    `(cider-result-overlay-face
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :background nil
                                    :box (:color ,sonokai-blue :line-width -1 :style nil)))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :background nil
-                                        :box (:color ,sonokai-256-blue :line-width -1 :style nil)))))
+                                       :background nil
+                                       :box (:color ,sonokai-256-blue :line-width -1 :style nil)))))
 
    `(cider-test-error-face
      ((,sonokai-class (:foreground ,sonokai-background
                                    :background ,sonokai-orange))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-orange))))
+                                       :background ,sonokai-256-orange))))
 
    `(cider-test-failure-face
      ((,sonokai-class (:foreground ,sonokai-background
                                    :background ,sonokai-red))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-red))))
+                                       :background ,sonokai-256-red))))
 
    `(cider-test-success-face
      ((,sonokai-class (:foreground ,sonokai-background
                                    :background ,sonokai-green))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-green))))
+                                       :background ,sonokai-256-green))))
 
    `(cider-traced-face
      ((,sonokai-class :box (:color ,sonokai-blue :line-width -1 :style nil))
@@ -1426,69 +1430,69 @@ Also affects 'linum-mode' background."
                                    :weight bold
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :weight bold
-                                        :underline t))))
+                                       :weight bold
+                                       :underline t))))
 
    `(clojure-test-error-face
      ((,sonokai-class (:foreground ,sonokai-orange
                                    :weight bold
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :weight bold
-                                        :underline t))))
+                                       :weight bold
+                                       :underline t))))
 
    `(clojure-test-success-face
      ((,sonokai-class (:foreground ,sonokai-green
                                    :weight bold
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :weight bold
-                                        :underline t))))
+                                       :weight bold
+                                       :underline t))))
 
    ;; company-mode
    `(company-tooltip
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-emphasis))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-emphasis))))
+                                       :foreground ,sonokai-256-emphasis))))
 
    `(company-tooltip-selection
      ((,sonokai-class (:background ,sonokai-blue
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-blue
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(company-tooltip-mouse
      ((,sonokai-class (:background ,sonokai-blue
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-blue
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(company-tooltip-common
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :underline t))))
+                                       :underline t))))
 
    `(company-tooltip-common-selection
      ((,sonokai-class (:foreground ,sonokai-background
                                    :background ,sonokai-blue
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-blue
-                                        :underline t))))
+                                       :background ,sonokai-256-blue
+                                       :underline t))))
 
    `(company-preview
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-emphasis))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-emphasis))))
+                                       :foreground ,sonokai-256-emphasis))))
 
    `(company-preview-common
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :underline t))))
+                                       :underline t))))
 
    `(company-scrollbar-bg
      ((,sonokai-class (:background ,sonokai-gray))
@@ -1502,127 +1506,127 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-green))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-green))))
+                                       :foreground ,sonokai-256-green))))
 
    `(company-template-field
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-blue))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-blue))))
+                                       :foreground ,sonokai-256-blue))))
 
    ;; compilation
    `(compilation-column-face
      ((,sonokai-class (:foreground ,sonokai-cyan
                                    :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-cyan
-                                        :underline nil))))
+                                       :underline nil))))
 
    `(compilation-column-number
      ((,sonokai-class (:inherit font-lock-doc-face
                                 :foreground ,sonokai-cyan
                                 :underline nil))
       (,sonokai-256-class (:inherit font-lock-doc-face
-                                     :foreground ,sonokai-256-cyan
-                                     :underline nil))))
+                                    :foreground ,sonokai-256-cyan
+                                    :underline nil))))
 
    `(compilation-enter-directory-face
      ((,sonokai-class (:foreground ,sonokai-green
                                    :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :underline nil))))
+                                       :underline nil))))
 
    `(compilation-error
      ((,sonokai-class (:inherit error
                                 :underline nil))
       (,sonokai-256-class (:inherit error
-                                     :underline nil))))
+                                    :underline nil))))
 
    `(compilation-error-face
      ((,sonokai-class (:foreground ,sonokai-red
                                    :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :underline nil))))
+                                       :underline nil))))
 
    `(compilation-face
      ((,sonokai-class (:foreground ,sonokai-foreground
                                    :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                        :underline nil))))
+                                       :underline nil))))
 
    `(compilation-info
      ((,sonokai-class (:foreground ,sonokai-comments
                                    :underline nil
                                    :bold nil))
       (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                        :underline nil
-                                        :bold nil))))
+                                       :underline nil
+                                       :bold nil))))
 
    `(compilation-info-face
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :underline nil))))
+                                       :underline nil))))
 
    `(compilation-leave-directory-face
      ((,sonokai-class (:foreground ,sonokai-green
                                    :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :underline nil))))
+                                       :underline nil))))
 
    `(compilation-line-face
      ((,sonokai-class (:foreground ,sonokai-green
                                    :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :underline nil))))
+                                       :underline nil))))
 
    `(compilation-line-number
      ((,sonokai-class (:foreground ,sonokai-green
                                    :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :underline nil))))
+                                       :underline nil))))
 
    `(compilation-warning
      ((,sonokai-class (:inherit warning
                                 :underline nil))
       (,sonokai-256-class (:inherit warning
-                                     :underline nil))))
+                                    :underline nil))))
 
    `(compilation-warning-face
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight normal
                                    :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight normal
-                                        :underline nil))))
+                                       :weight normal
+                                       :underline nil))))
 
    `(compilation-mode-line-exit
      ((,sonokai-class (:inherit compilation-info
                                 :foreground ,sonokai-green
                                 :weight bold))
       (,sonokai-256-class (:inherit compilation-info
-                                     :foreground ,sonokai-256-green
-                                     :weight bold))))
+                                    :foreground ,sonokai-256-green
+                                    :weight bold))))
 
    `(compilation-mode-line-fail
      ((,sonokai-class (:inherit compilation-error
                                 :foreground ,sonokai-red
                                 :weight bold))
       (,sonokai-256-class (:inherit compilation-error
-                                     :foreground ,sonokai-256-red
-                                     :weight bold))))
+                                    :foreground ,sonokai-256-red
+                                    :weight bold))))
 
    `(compilation-mode-line-run
      ((,sonokai-class (:foreground ,sonokai-orange
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-orange
-                                        :weight bold))))
+                                       :weight bold))))
 
    ;; CSCOPE
    `(cscope-file-face
      ((,sonokai-class (:foreground ,sonokai-green
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(cscope-function-face
      ((,sonokai-class (:foreground ,sonokai-blue))
@@ -1640,7 +1644,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:background ,sonokai-blue
                                    :foreground ,sonokai-foreground))
       (,sonokai-256-class (:background ,sonokai-256-blue
-                                        :foreground ,sonokai-256-foreground))))
+                                       :foreground ,sonokai-256-foreground))))
 
    ;; ctable
    `(ctbl:face-cell-select
@@ -1649,36 +1653,36 @@ Also affects 'linum-mode' background."
                                    :underline ,sonokai-emphasis
                                    :weight bold))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-emphasis
-                                        :underline ,sonokai-256-emphasis
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-emphasis
+                                       :underline ,sonokai-256-emphasis
+                                       :weight bold))))
 
    `(ctbl:face-continue-bar
      ((,sonokai-class (:background ,sonokai-gray
                                    :foreground ,sonokai-yellow))
       (,sonokai-256-class (:background ,sonokai-256-gray
-                                        :foreground ,sonokai-256-yellow))))
+                                       :foreground ,sonokai-256-yellow))))
 
    `(ctbl:face-row-select
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-foreground
                                    :underline t))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-foreground
-                                        :underline t))))
+                                       :foreground ,sonokai-256-foreground
+                                       :underline t))))
 
    ;; coffee
    `(coffee-mode-class-name
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(coffee-mode-function-param
      ((,sonokai-class (:foreground ,sonokai-violet
                                    :slant italic))
       (,sonokai-256-class (:foreground ,sonokai-256-violet
-                                        :slant italic))))
+                                       :slant italic))))
 
    ;; custom
    `(custom-face-tag
@@ -1687,17 +1691,17 @@ Also affects 'linum-mode' background."
                                 :foreground ,sonokai-violet
                                 :weight bold))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :height ,sonokai-height-plus-3
-                                     :foreground ,sonokai-256-violet
-                                     :weight bold))))
+                                    :height ,sonokai-height-plus-3
+                                    :foreground ,sonokai-256-violet
+                                    :weight bold))))
 
    `(custom-variable-tag
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :foreground ,sonokai-cyan
                                 :height ,sonokai-height-plus-3))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :foreground ,sonokai-256-cyan
-                                     :height ,sonokai-height-plus-3))))
+                                    :foreground ,sonokai-256-cyan
+                                    :height ,sonokai-height-plus-3))))
 
    `(custom-comment-tag
      ((,sonokai-class (:foreground ,sonokai-comments))
@@ -1708,16 +1712,16 @@ Also affects 'linum-mode' background."
                                 :foreground ,sonokai-blue
                                 :height ,sonokai-height-plus-3))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :foreground ,sonokai-256-blue
-                                     :height ,sonokai-height-plus-3))))
+                                    :foreground ,sonokai-256-blue
+                                    :height ,sonokai-height-plus-3))))
 
    `(custom-group-tag-1
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :foreground ,sonokai-red
                                 :height ,sonokai-height-plus-3))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :foreground ,sonokai-256-red
-                                     :height ,sonokai-height-plus-3))))
+                                    :foreground ,sonokai-256-red
+                                    :height ,sonokai-height-plus-3))))
 
    `(custom-state
      ((,sonokai-class (:foreground ,sonokai-green))
@@ -1728,19 +1732,19 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-green
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(diff-changed
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(diff-removed
      ((,sonokai-class (:foreground ,sonokai-red
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(diff-header
      ((,sonokai-class (:background ,sonokai-background))
@@ -1751,124 +1755,124 @@ Also affects 'linum-mode' background."
                                    :foreground ,sonokai-foreground
                                    :weight bold))
       (,sonokai-256-class (:background ,sonokai-256-background
-                                        :foreground ,sonokai-256-foreground
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-foreground
+                                       :weight bold))))
 
    `(diff-refine-added
      ((,sonokai-class (:foreground ,sonokai-green
                                    :background ,sonokai-diff-green-base))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :background ,sonokai-256-diff-green-base))))
+                                       :background ,sonokai-256-diff-green-base))))
 
    `(diff-refine-change
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :background ,sonokai-diff-blue-base))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-diff-blue-base))))
+                                       :background ,sonokai-256-diff-blue-base))))
 
    `(diff-refine-removed
      ((,sonokai-class (:foreground ,sonokai-red
                                    :background ,sonokai-diff-red-base))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :background ,sonokai-256-diff-red-base))))
+                                       :background ,sonokai-256-diff-red-base))))
 
    ;; diff-hl
    `(diff-hl-change
      ((,sonokai-class (:background ,sonokai-yellow-hc-alt
                                    :foreground ,sonokai-yellow-hc-alt))
       (,sonokai-256-class (:background ,sonokai-256-yellow-hc
-                                        :foreground ,sonokai-256-yellow-hc))))
+                                       :foreground ,sonokai-256-yellow-hc))))
 
    `(diff-hl-delete
      ((,sonokai-class (:background ,sonokai-red-hc-alt
                                    :foreground ,sonokai-red-hc-alt))
       (,sonokai-256-class (:background ,sonokai-256-red-hc
-                                        :foreground ,sonokai-256-red-hc))))
+                                       :foreground ,sonokai-256-red-hc))))
 
    `(diff-hl-insert
      ((,sonokai-class (:background ,sonokai-green-hc-alt
                                    :foreground ,sonokai-green-hc-alt))
       (,sonokai-256-class (:background ,sonokai-256-green-hc
-                                        :foreground ,sonokai-256-green-hc))))
+                                       :foreground ,sonokai-256-green-hc))))
 
    `(diff-hl-unknown
      ((,sonokai-class (:background ,sonokai-violet-hc
                                    :foreground ,sonokai-violet-hc))
       (,sonokai-256-class (:background ,sonokai-256-violet-hc
-                                        :foreground ,sonokai-256-violet-hc))))
+                                       :foreground ,sonokai-256-violet-hc))))
 
    ;; ediff
    `(ediff-fine-diff-A
      ((,sonokai-class (:foreground ,sonokai-foreground
-				    :background ,sonokai-diff-red-emphasis))
+                                   :background ,sonokai-diff-red-emphasis))
       (,sonokai-256-class (:foreground: ,sonokai-256-foreground
-					:background ,sonokai-256-diff-red-emphasis))))
+                                        :background ,sonokai-256-diff-red-emphasis))))
 
    `(ediff-fine-diff-B
      ((,sonokai-class (:foreground ,sonokai-foreground
-		       :background ,sonokai-diff-green-base))
+                                   :background ,sonokai-diff-green-base))
       (,sonokai-256-class (:foreground: sonokai-256-foreground,
-			   :background ,sonokai-256-diff-green-base))))
+                                        :background ,sonokai-256-diff-green-base))))
 
    `(ediff-fine-diff-C
      ((,sonokai-class (:foreground ,sonokai-foreground
-		       :background ,sonokai-diff-blue-base))
+                                   :background ,sonokai-diff-blue-base))
       (,sonokai-256-class (:foreground: sonokai-foreground,
-			   :background ,sonokai-256-diff-blue-base))))
+                                        :background ,sonokai-256-diff-blue-base))))
 
    `(ediff-current-diff-A
      ((,sonokai-class (:foreground ,sonokai-foreground
-				   :background ,sonokai-diff-red-alt))
+                                   :background ,sonokai-diff-red-alt))
       (,sonokai-256-class (:foreground ,sonokai-foreground
-				       :background ,sonokai-256-diff-red-alt))))
+                                       :background ,sonokai-256-diff-red-alt))))
 
    `(ediff-current-diff-B
      ((,sonokai-class (:foreground ,sonokai-foreground
-				   :background ,sonokai-diff-green-alt))
+                                   :background ,sonokai-diff-green-alt))
       (,sonokai-256-class (:foreground ,sonokai-foreground
-				       :background ,sonokai-256-diff-green-alt))))
+                                       :background ,sonokai-256-diff-green-alt))))
 
    `(ediff-current-diff-C
      ((,sonokai-class (:foreground ,sonokai-foreground
-				   :background ,sonokai-diff-blue-alt))
+                                   :background ,sonokai-diff-blue-alt))
       (,sonokai-256-class (:foreground ,sonokai-foreground
-				       :background ,sonokai-256-diff-blue-alt))))
+                                       :background ,sonokai-256-diff-blue-alt))))
 
    `(ediff-even-diff-A
      ((,sonokai-class (:background ,sonokai-background-alt
                                    :foreground ,sonokai-foreground ))
       (,sonokai-256-class (:background ,sonokai-256-background-alt
-                                        :foreground ,sonokai-256-foreground ))))
+                                       :foreground ,sonokai-256-foreground ))))
 
    `(ediff-odd-diff-A
      ((,sonokai-class (:background ,sonokai-background-alt
                                    :foreground ,sonokai-foreground ))
       (,sonokai-256-class (:background ,sonokai-256-background-alt
-                                        :foreground ,sonokai-256-foreground ))))
+                                       :foreground ,sonokai-256-foreground ))))
 
    `(ediff-even-diff-B
      ((,sonokai-class (:background ,sonokai-background-alt
                                    :foreground ,sonokai-foreground ))
       (,sonokai-256-class (:background ,sonokai-256-background-alt
-                                        :foreground ,sonokai-256-foreground ))))
+                                       :foreground ,sonokai-256-foreground ))))
 
    `(ediff-odd-diff-B
      ((,sonokai-class (:background ,sonokai-background-alt
                                    :foreground ,sonokai-foreground ))
       (,sonokai-256-class (:background ,sonokai-256-background-alt
-                                        :foreground ,sonokai-256-foreground ))))
+                                       :foreground ,sonokai-256-foreground ))))
 
    `(ediff-even-diff-C
      ((,sonokai-class (:background ,sonokai-background-alt
                                    :foreground ,sonokai-foreground ))
       (,sonokai-256-class (:background ,sonokai-256-background-alt
-                                        :foreground ,sonokai-256-foreground ))))
+                                       :foreground ,sonokai-256-foreground ))))
 
    `(ediff-odd-diff-C
      ((,sonokai-class (:background ,sonokai-background-alt
                                    :foreground ,sonokai-foreground ))
       (,sonokai-256-class (:background ,sonokai-256-background-alt
-                                        :foreground ,sonokai-256-foreground ))))
+                                       :foreground ,sonokai-256-foreground ))))
 
    ;; edts
    `(edts-face-error-line
@@ -1883,9 +1887,9 @@ Also affects 'linum-mode' background."
        (:underline (:style line :color ,sonokai-256-red)
                    :inherit unspecified))
       (,sonokai-256-class (:foreground ,sonokai-256-red-hc
-                                        :background ,sonokai-256-red-lc
-                                        :weight bold
-                                        :underline t))))
+                                       :background ,sonokai-256-red-lc
+                                       :weight bold
+                                       :underline t))))
 
    `(edts-face-warning-line
      ((,(append '((supports :underline (:style line))) sonokai-class)
@@ -1899,37 +1903,37 @@ Also affects 'linum-mode' background."
        (:underline (:style line :color ,sonokai-256-yellow)
                    :inherit unspecified))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow-hc
-                                        :background ,sonokai-256-yellow-lc
-                                        :weight bold
-                                        :underline t))))
+                                       :background ,sonokai-256-yellow-lc
+                                       :weight bold
+                                       :underline t))))
 
    `(edts-face-error-fringe-bitmap
      ((,sonokai-class (:foreground ,sonokai-red
                                    :background unspecified
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :background unspecified
-                                        :weight bold))))
+                                       :background unspecified
+                                       :weight bold))))
 
    `(edts-face-warning-fringe-bitmap
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :background unspecified
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :background unspecified
-                                        :weight bold))))
+                                       :background unspecified
+                                       :weight bold))))
 
    `(edts-face-error-mode-line
      ((,sonokai-class (:background ,sonokai-red
                                    :foreground unspecified))
       (,sonokai-256-class (:background ,sonokai-256-red
-                                        :foreground unspecified))))
+                                       :foreground unspecified))))
 
    `(edts-face-warning-mode-line
      ((,sonokai-class (:background ,sonokai-yellow
                                    :foreground unspecified))
       (,sonokai-256-class (:background ,sonokai-256-yellow
-                                        :foreground unspecified))))
+                                       :foreground unspecified))))
 
 
    ;; elfeed
@@ -2005,9 +2009,9 @@ Also affects 'linum-mode' background."
        (:underline (:style wave :color ,sonokai-256-red)
                    :inherit unspecified))
       (,sonokai-256-class (:foreground ,sonokai-256-red-hc
-                                        :background ,sonokai-256-red-lc
-                                        :weight bold
-                                        :underline t))))
+                                       :background ,sonokai-256-red-lc
+                                       :weight bold
+                                       :underline t))))
 
    `(erm-syn-warnline
      ((,(append '((supports :underline (:style wave))) sonokai-class)
@@ -2021,9 +2025,9 @@ Also affects 'linum-mode' background."
        (:underline (:style wave :color ,sonokai-256-orange)
                    :inherit unspecified))
       (,sonokai-256-class (:foreground ,sonokai-256-orange-hc
-                                        :background ,sonokai-256-orange-lc
-                                        :weight bold
-                                        :underline t))))
+                                       :background ,sonokai-256-orange-lc
+                                       :weight bold
+                                       :underline t))))
 
    ;; epc
    `(epc:face-title
@@ -2032,9 +2036,9 @@ Also affects 'linum-mode' background."
                                    :weight normal
                                    :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :background ,sonokai-256-background
-                                        :weight normal
-                                        :underline nil))))
+                                       :background ,sonokai-256-background
+                                       :weight normal
+                                       :underline nil))))
 
    ;; erc
    `(erc-action-face
@@ -2048,7 +2052,7 @@ Also affects 'linum-mode' background."
    `(erc-current-nick-face
      ((,sonokai-class (:foreground ,sonokai-blue :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(erc-dangerous-host-face
      ((,sonokai-class (:inherit font-lock-warning-face))
@@ -2062,7 +2066,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:inherit erc-default-face
                                 :background ,sonokai-highlight))
       (,sonokai-256-class (:inherit erc-default-face
-                                     :background ,sonokai-256-highlight))))
+                                    :background ,sonokai-256-highlight))))
 
    `(erc-direct-msg-face
      ((,sonokai-class (:inherit erc-default-face))
@@ -2084,19 +2088,19 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(erc-nick-default-face
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(erc-my-nick-face
      ((,sonokai-class (:foreground ,sonokai-red
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(erc-nick-msg-face
      ((,sonokai-class (:inherit erc-default-face))
@@ -2110,15 +2114,15 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-orange
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-orange
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(erc-prompt-face
      ((,sonokai-class (:foreground ,sonokai-orange
                                    :background ,sonokai-background
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-orange
-                                        :background ,sonokai-256-background
-                                        :weight bold))))
+                                       :background ,sonokai-256-background
+                                       :weight bold))))
 
    `(erc-timestamp-face
      ((,sonokai-class (:foreground ,sonokai-green))
@@ -2132,13 +2136,13 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :inherit bold))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :inherit bold))))
+                                       :inherit bold))))
 
    `(eshell-ls-archive
      ((,sonokai-class (:foreground ,sonokai-red
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :inherit bold))))
+                                       :inherit bold))))
 
    `(eshell-ls-backup
      ((,sonokai-class (:inherit font-lock-comment-face))
@@ -2152,13 +2156,13 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :inherit bold))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :inherit bold))))
+                                       :inherit bold))))
 
    `(eshell-ls-executable
      ((,sonokai-class (:foreground ,sonokai-green
                                    :inherit bold))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :inherit bold))))
+                                       :inherit bold))))
 
    `(eshell-ls-unreadable
      ((,sonokai-class (:foreground ,sonokai-foreground))
@@ -2176,13 +2180,13 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :inherit bold))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :inherit bold))))
+                                       :inherit bold))))
 
    `(eshell-ls-symlink
      ((,sonokai-class (:foreground ,sonokai-cyan
                                    :inherit bold))
       (,sonokai-256-class (:foreground ,sonokai-256-cyan
-                                        :inherit bold))))
+                                       :inherit bold))))
 
    ;; evil-ex-substitute
    `(evil-ex-substitute-matches
@@ -2190,8 +2194,8 @@ Also affects 'linum-mode' background."
                                    :foreground ,sonokai-red-l
                                    :inherit italic))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-red-l
-                                        :inherit italic))))
+                                       :foreground ,sonokai-256-red-l
+                                       :inherit italic))))
    `(evil-ex-substitute-replacement
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-green-l
@@ -2210,9 +2214,9 @@ Also affects 'linum-mode' background."
                                    :underline t
                                    :slant italic))
       (,sonokai-256-class (:background ,sonokai-256-background
-                                        :foreground ,sonokai-256-orange
-                                        :underline t
-                                        :slant italic))))
+                                       :foreground ,sonokai-256-orange
+                                       :underline t
+                                       :slant italic))))
 
    `(fic-face
      ((,sonokai-class (:background ,sonokai-background
@@ -2220,9 +2224,9 @@ Also affects 'linum-mode' background."
                                    :weight normal
                                    :slant italic))
       (,sonokai-256-class (:background ,sonokai-256-background
-                                        :foreground ,sonokai-256-orange
-                                        :weight normal
-                                        :slant italic))))
+                                       :foreground ,sonokai-256-orange
+                                       :weight normal
+                                       :slant italic))))
 
    `(font-lock-fic-face
      ((,sonokai-class (:background ,sonokai-background
@@ -2230,9 +2234,9 @@ Also affects 'linum-mode' background."
                                    :weight normal
                                    :slant italic))
       (,sonokai-256-class (:background ,sonokai-256-background
-                                        :foreground ,sonokai-256-orange
-                                        :weight normal
-                                        :slant italic))))
+                                       :foreground ,sonokai-256-orange
+                                       :weight normal
+                                       :slant italic))))
 
    ;; flx
    `(flx-highlight-face
@@ -2240,8 +2244,8 @@ Also affects 'linum-mode' background."
                                    :weight normal
                                    :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :weight normal
-                                        :underline nil))))
+                                       :weight normal
+                                       :underline nil))))
 
    ;; flymake
    `(flymake-errline
@@ -2260,9 +2264,9 @@ Also affects 'linum-mode' background."
                    :foreground unspecified
                    :background unspecified))
       (,sonokai-256-class (:foreground ,sonokai-256-red-hc
-                                        :background ,sonokai-256-red-lc
-                                        :weight bold
-                                        :underline t))))
+                                       :background ,sonokai-256-red-lc
+                                       :weight bold
+                                       :underline t))))
 
    `(flymake-infoline
      ((,(append '((supports :underline (:style wave))) sonokai-class)
@@ -2278,7 +2282,7 @@ Also affects 'linum-mode' background."
                    :foreground unspecified
                    :background unspecified))
       (,sonokai-256-class (:foreground ,sonokai-256-green-hc
-                                        :background ,sonokai-256-green-lc))))
+                                       :background ,sonokai-256-green-lc))))
 
    `(flymake-warnline
      ((,(append '((supports :underline (:style wave))) sonokai-class)
@@ -2296,9 +2300,9 @@ Also affects 'linum-mode' background."
                    :foreground unspecified
                    :background unspecified))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow-hc
-                                        :background ,sonokai-256-yellow-lc
-                                        :weight bold
-                                        :underline t))))
+                                       :background ,sonokai-256-yellow-lc
+                                       :weight bold
+                                       :underline t))))
 
    ;; flycheck
    `(flycheck-error
@@ -2311,9 +2315,9 @@ Also affects 'linum-mode' background."
       (,(append '((supports :underline (:style line))) sonokai-256-class )
        (:underline (:style line :color ,sonokai-256-red)))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :background ,sonokai-256-background
-                                        :weight bold
-                                        :underline t))))
+                                       :background ,sonokai-256-background
+                                       :weight bold
+                                       :underline t))))
 
    `(flycheck-warning
      ((,(append '((supports :underline (:style line))) sonokai-class)
@@ -2325,9 +2329,9 @@ Also affects 'linum-mode' background."
       (,(append '((supports :underline (:style line))) sonokai-256-class )
        (:underline (:style line :color ,sonokai-256-orange)))
       (,sonokai-256-class (:foreground ,sonokai-256-orange
-                                        :background ,sonokai-256-background
-                                        :weight bold
-                                        :underline t))))
+                                       :background ,sonokai-256-background
+                                       :weight bold
+                                       :underline t))))
 
    `(flycheck-info
      ((,(append '((supports :underline (:style line))) sonokai-class)
@@ -2339,33 +2343,33 @@ Also affects 'linum-mode' background."
       (,(append '((supports :underline (:style line))) sonokai-256-class )
        (:underline (:style line :color ,sonokai-256-blue)))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :background ,sonokai-256-background
-                                        :weight bold
-                                        :underline t))))
+                                       :background ,sonokai-256-background
+                                       :weight bold
+                                       :underline t))))
 
    `(flycheck-fringe-error
      ((,sonokai-class (:foreground ,sonokai-red-l
                                    :background unspecified
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-red-l
-                                        :background unspecified
-                                        :weight bold))))
+                                       :background unspecified
+                                       :weight bold))))
 
    `(flycheck-fringe-warning
      ((,sonokai-class (:foreground ,sonokai-orange-l
                                    :background unspecified
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-orange-l
-                                        :background unspecified
-                                        :weight bold))))
+                                       :background unspecified
+                                       :weight bold))))
 
    `(flycheck-fringe-info
      ((,sonokai-class (:foreground ,sonokai-blue-l
                                    :background unspecified
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-blue-l
-                                        :background unspecified
-                                        :weight bold))))
+                                       :background unspecified
+                                       :weight bold))))
 
    ;; flyspell
    `(flyspell-duplicate
@@ -2379,8 +2383,8 @@ Also affects 'linum-mode' background."
        (:underline (:style wave :color ,sonokai-256-yellow)
                    :inherit unspecified))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight bold
-                                        :underline t))))
+                                       :weight bold
+                                       :underline t))))
 
    `(flyspell-incorrect
      ((,(append '((supports :underline (:style wave))) sonokai-class)
@@ -2393,128 +2397,128 @@ Also affects 'linum-mode' background."
        (:underline (:style wave :color ,sonokai-256-red)
                    :inherit unspecified))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :weight bold
-                                        :underline t))))
+                                       :weight bold
+                                       :underline t))))
 
 
    ;; git-gutter
    `(git-gutter:added
      ((,sonokai-class (:inherit default
-				:background ,sonokai-background
-				:foreground ,sonokai-green
-				:weight bold))
+                                :background ,sonokai-background
+                                :foreground ,sonokai-green
+                                :weight bold))
       (,sonokai-256-class (:inherit default
-				    :background ,sonokai-256-background
-				    :foreground ,sonokai-256-green
-				    :weight bold))))
+                                    :background ,sonokai-256-background
+                                    :foreground ,sonokai-256-green
+                                    :weight bold))))
 
    `(git-gutter:deleted
      ((,sonokai-class (:inherit default
-				:background ,sonokai-background
-				:foreground ,sonokai-red
-				:weight bold))
+                                :background ,sonokai-background
+                                :foreground ,sonokai-red
+                                :weight bold))
       (,sonokai-256-class (:inherit default
-				    :background ,sonokai-256-background
-				    :foreground ,sonokai-256-red
-				    :weight bold))))
+                                    :background ,sonokai-256-background
+                                    :foreground ,sonokai-256-red
+                                    :weight bold))))
 
    `(git-gutter:modified
      ((,sonokai-class (:inherit default
-				:background ,sonokai-background
-				:foreground ,sonokai-yellow
-				:weight bold))
+                                :background ,sonokai-background
+                                :foreground ,sonokai-yellow
+                                :weight bold))
       (,sonokai-256-class (:inherit default
-				    :background ,sonokai-256-background
-				    :foreground ,sonokai-256-yellow
-				    :weight bold))))
+                                    :background ,sonokai-256-background
+                                    :foreground ,sonokai-256-yellow
+                                    :weight bold))))
 
    `(git-gutter:unchanged
      ((,sonokai-class (:inherit default
-				:background ,sonokai-background
-				:foreground ,sonokai-highlight-line
-				:weight bold))
+                                :background ,sonokai-background
+                                :foreground ,sonokai-highlight-line
+                                :weight bold))
       (,sonokai-256-class (:inherit default
-				    :background ,sonokai-256-background
-				    :foreground ,sonokai-256-highlight-line
-				    :weight bold))))
+                                    :background ,sonokai-256-background
+                                    :foreground ,sonokai-256-highlight-line
+                                    :weight bold))))
 
    ;; git-gutter-fr
    `(git-gutter-fr:added
      ((,sonokai-class (:foreground ,sonokai-green
                                    :inherit bold))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :inherit bold))))
+                                       :inherit bold))))
 
    `(git-gutter-fr:deleted
      ((,sonokai-class (:foreground ,sonokai-red
                                    :inherit bold))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :inherit bold))))
+                                       :inherit bold))))
 
    `(git-gutter-fr:modified
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :inherit bold))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :inherit bold))))
+                                       :inherit bold))))
 
    ;; git-gutter+ and git-gutter+-fr
    `(git-gutter+-added
      ((,sonokai-class (:inherit default
-				:background ,sonokai-background
-				:foreground ,sonokai-green
-				:weight bold))
+                                :background ,sonokai-background
+                                :foreground ,sonokai-green
+                                :weight bold))
       (,sonokai-256-class (:inherit default
-				    :background ,sonokai-256-background
-				    :foreground ,sonokai-256-green
-				    :weight bold))))
+                                    :background ,sonokai-256-background
+                                    :foreground ,sonokai-256-green
+                                    :weight bold))))
 
    `(git-gutter+-deleted
      ((,sonokai-class (:inherit default
-				:background ,sonokai-background
-				:foreground ,sonokai-red
-				:weight bold))
+                                :background ,sonokai-background
+                                :foreground ,sonokai-red
+                                :weight bold))
       (,sonokai-256-class (:inherit default
-				    :background ,sonokai-256-background
-				    :foreground ,sonokai-256-red
-				    :weight bold))))
+                                    :background ,sonokai-256-background
+                                    :foreground ,sonokai-256-red
+                                    :weight bold))))
 
    `(git-gutter+-modified
      ((,sonokai-class (:inherit default
-				:background ,sonokai-background
-				:foreground ,sonokai-yellow
-				:weight bold))
+                                :background ,sonokai-background
+                                :foreground ,sonokai-yellow
+                                :weight bold))
       (,sonokai-256-class (:inherit default
-				    :background ,sonokai-256-background
-				    :foreground ,sonokai-256-yellow
-				    :weight bold))))
+                                    :background ,sonokai-256-background
+                                    :foreground ,sonokai-256-yellow
+                                    :weight bold))))
 
    `(git-gutter+-unchanged
      ((,sonokai-class (:inherit default
-				:background ,sonokai-background
-				:foreground ,sonokai-highlight-line
-				:weight bold))
+                                :background ,sonokai-background
+                                :foreground ,sonokai-highlight-line
+                                :weight bold))
       (,sonokai-256-class (:inherit default
-				    :background ,sonokai-256-background
-				    :foreground ,sonokai-256-highlight-line
-				    :weight bold))))
+                                    :background ,sonokai-256-background
+                                    :foreground ,sonokai-256-highlight-line
+                                    :weight bold))))
 
    `(git-gutter-fr+-added
      ((,sonokai-class (:foreground ,sonokai-green
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(git-gutter-fr+-deleted
      ((,sonokai-class (:foreground ,sonokai-red
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(git-gutter-fr+-modified
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight bold))))
+                                       :weight bold))))
 
    ;; git-timemachine
    `(git-timemachine-minibuffer-detail-face
@@ -2522,8 +2526,8 @@ Also affects 'linum-mode' background."
                                    :background ,sonokai-highlight-line
                                    :inherit bold))
       (,sonokai-256-class (:foreground ,sonokai-blue
-                                        :background ,sonokai-256-highlight-line
-                                        :inherit bold))))
+                                       :background ,sonokai-256-highlight-line
+                                       :inherit bold))))
 
    ;; guide-key
    `(guide-key/highlight-command-face
@@ -2543,7 +2547,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:weight bold
                                :inherit gnus-group-mail-1-empty))
       (,sonokai-256-class (:weight bold
-                                    :inherit gnus-group-mail-1-empty))))
+                                   :inherit gnus-group-mail-1-empty))))
 
    `(gnus-group-mail-1-empty
      ((,sonokai-class (:inherit gnus-group-news-1-empty))
@@ -2553,7 +2557,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:weight bold
                                :inherit gnus-group-mail-2-empty))
       (,sonokai-256-class (:weight bold
-                                    :inherit gnus-group-mail-2-empty))))
+                                   :inherit gnus-group-mail-2-empty))))
 
    `(gnus-group-mail-2-empty
      ((,sonokai-class (:inherit gnus-group-news-2-empty))
@@ -2563,7 +2567,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:weight bold
                                :inherit gnus-group-mail-3-empty))
       (,sonokai-256-class (:weight bold
-                                    :inherit gnus-group-mail-3-empty))))
+                                   :inherit gnus-group-mail-3-empty))))
 
    `(gnus-group-mail-3-empty
      ((,sonokai-class (:inherit gnus-group-news-3-empty))
@@ -2573,7 +2577,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:weight bold
                                :inherit gnus-group-mail-low-empty))
       (,sonokai-256-class (:weight bold
-                                    :inherit gnus-group-mail-low-empty))))
+                                   :inherit gnus-group-mail-low-empty))))
 
    `(gnus-group-mail-low-empty
      ((,sonokai-class (:inherit gnus-group-news-low-empty))
@@ -2583,43 +2587,43 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:weight bold
                                :inherit gnus-group-news-1-empty))
       (,sonokai-256-class (:weight bold
-                                    :inherit gnus-group-news-1-empty))))
+                                   :inherit gnus-group-news-1-empty))))
 
    `(gnus-group-news-2
      ((,sonokai-class (:weight bold
                                :inherit gnus-group-news-2-empty))
       (,sonokai-256-class (:weight bold
-                                    :inherit gnus-group-news-2-empty))))
+                                   :inherit gnus-group-news-2-empty))))
 
    `(gnus-group-news-3
      ((,sonokai-class (:weight bold
                                :inherit gnus-group-news-3-empty))
       (,sonokai-256-class (:weight bold
-                                    :inherit gnus-group-news-3-empty))))
+                                   :inherit gnus-group-news-3-empty))))
 
    `(gnus-group-news-4
      ((,sonokai-class (:weight bold
                                :inherit gnus-group-news-4-empty))
       (,sonokai-256-class (:weight bold
-                                    :inherit gnus-group-news-4-empty))))
+                                   :inherit gnus-group-news-4-empty))))
 
    `(gnus-group-news-5
      ((,sonokai-class (:weight bold
                                :inherit gnus-group-news-5-empty))
       (,sonokai-256-class (:weight bold
-                                    :inherit gnus-group-news-5-empty))))
+                                   :inherit gnus-group-news-5-empty))))
 
    `(gnus-group-news-6
      ((,sonokai-class (:weight bold
                                :inherit gnus-group-news-6-empty))
       (,sonokai-256-class (:weight bold
-                                    :inherit gnus-group-news-6-empty))))
+                                   :inherit gnus-group-news-6-empty))))
 
    `(gnus-group-news-low
      ((,sonokai-class (:weight bold
                                :inherit gnus-group-news-low-empty))
       (,sonokai-256-class (:weight bold
-                                    :inherit gnus-group-news-low-empty))))
+                                   :inherit gnus-group-news-low-empty))))
 
    `(gnus-header-content
      ((,sonokai-class (:inherit message-header-other))
@@ -2649,25 +2653,25 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(gnus-summary-high-read
      ((,sonokai-class (:foreground ,sonokai-green
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(gnus-summary-high-ticked
      ((,sonokai-class (:foreground ,sonokai-orange
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-orange
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(gnus-summary-high-unread
      ((,sonokai-class (:foreground ,sonokai-foreground
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(gnus-summary-low-ancient
      ((,sonokai-class (:foreground ,sonokai-blue))
@@ -2705,7 +2709,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(gnus-cite-1
      ((,sonokai-class (:foreground ,sonokai-blue))
@@ -2787,7 +2791,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:background ,sonokai-foreground
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-foreground
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
 
    ;; helm
@@ -2844,8 +2848,8 @@ Also affects 'linum-mode' background."
                                    :background ,sonokai-background
                                    :inverse-video t))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :background ,sonokai-256-background
-                                        :inverse-video t))))
+                                       :background ,sonokai-256-background
+                                       :inverse-video t))))
 
    `(helm-buffer-size
      ((,sonokai-class (:foreground ,sonokai-comments))
@@ -2856,8 +2860,8 @@ Also affects 'linum-mode' background."
                                    :foreground ,sonokai-emphasis
                                    :bold t))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-emphasis
-                                        :bold t))))
+                                       :foreground ,sonokai-256-emphasis
+                                       :bold t))))
 
    `(helm-ff-directory
      ((,sonokai-class (:foreground ,sonokai-blue))
@@ -2871,21 +2875,21 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:background ,sonokai-background
                                    :foreground ,sonokai-foreground))
       (,sonokai-256-class (:background ,sonokai-256-background
-                                        :foreground ,sonokai-256-foreground))))
+                                       :foreground ,sonokai-256-foreground))))
 
    `(helm-ff-invalid-symlink
      ((,sonokai-class (:background ,sonokai-background
                                    :foreground ,sonokai-orange
                                    :slant italic))
       (,sonokai-256-class (:background ,sonokai-256-background
-                                        :foreground ,sonokai-256-orange
-                                        :slant italic))))
+                                       :foreground ,sonokai-256-orange
+                                       :slant italic))))
 
    `(helm-ff-prefix
      ((,sonokai-class (:background ,sonokai-green
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-green
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(helm-ff-symlink
      ((,sonokai-class (:foreground ,sonokai-cyan))
@@ -2895,7 +2899,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-cyan
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-cyan
-                                        :underline t))))
+                                       :underline t))))
 
    `(helm-grep-finish
      ((,sonokai-class (:foreground ,sonokai-green))
@@ -2926,20 +2930,20 @@ Also affects 'linum-mode' background."
                                    :background ,sonokai-highlight-line
                                    :bold t))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :background ,sonokai-256-highlight-line
-                                        :bold t))))
+                                       :background ,sonokai-256-highlight-line
+                                       :bold t))))
 
    `(helm-M-x-key
      ((,sonokai-class (:foreground ,sonokai-orange
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-orange
-                                        :underline t))))
+                                       :underline t))))
 
    `(helm-moccur-buffer
      ((,sonokai-class (:foreground ,sonokai-cyan
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-cyan
-                                        :underline t))))
+                                       :underline t))))
 
    `(helm-match
      ((,sonokai-class (:foreground ,sonokai-green :inherit bold))
@@ -2954,16 +2958,16 @@ Also affects 'linum-mode' background."
                                    :inherit bold
                                    :underline nil))
       (,sonokai-256-class (:background ,sonokai-256-highlight
-                                        :inherit bold
-                                        :underline nil))))
+                                       :inherit bold
+                                       :underline nil))))
 
    `(helm-selection-line
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-emphasis
                                    :underline nil))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-emphasis
-                                        :underline nil))))
+                                       :foreground ,sonokai-256-emphasis
+                                       :underline nil))))
 
    `(helm-separator
      ((,sonokai-class (:foreground ,sonokai-gray))
@@ -2974,8 +2978,8 @@ Also affects 'linum-mode' background."
                                    :foreground ,sonokai-background
                                    :underline nil))
       (,sonokai-256-class (:background ,sonokai-256-violet-l
-                                        :foreground ,sonokai-256-background
-                                        :underline nil))))
+                                       :foreground ,sonokai-256-background
+                                       :underline nil))))
 
    `(helm-swoop-target-line-face
      ((,sonokai-class (:background ,sonokai-highlight-line))
@@ -3001,7 +3005,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:background ,sonokai-background
                                    :foreground ,sonokai-magenta :bold t))
       (,sonokai-256-class (:background ,sonokai-256-background
-                                        :foreground ,sonokai-256-magenta :bold t))))
+                                       :foreground ,sonokai-256-magenta :bold t))))
 
    ;; helm-ls-git
    `(helm-ls-git-modified-not-staged-face
@@ -3045,59 +3049,59 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-yellow-lc
                                    :background ,sonokai-yellow-hc))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow-lc
-                                        :background ,sonokai-256-yellow-hc))))
+                                       :background ,sonokai-256-yellow-hc))))
 
    `(hi-pink
      ((,sonokai-class (:foreground ,sonokai-magenta-lc
                                    :background ,sonokai-magenta-hc))
       (,sonokai-256-class (:foreground ,sonokai-256-magenta-lc
-                                        :background ,sonokai-256-magenta-hc))))
+                                       :background ,sonokai-256-magenta-hc))))
 
    `(hi-green
      ((,sonokai-class (:foreground ,sonokai-green-lc
                                    :background ,sonokai-green-hc))
       (,sonokai-256-class (:foreground ,sonokai-256-green-lc
-                                        :background ,sonokai-256-green-hc))))
+                                       :background ,sonokai-256-green-hc))))
 
    `(hi-blue
      ((,sonokai-class (:foreground ,sonokai-blue-lc
                                    :background ,sonokai-blue-hc))
       (,sonokai-256-class (:foreground ,sonokai-256-blue-lc
-                                        :background ,sonokai-256-blue-hc))))
+                                       :background ,sonokai-256-blue-hc))))
 
    `(hi-black-b
      ((,sonokai-class (:foreground ,sonokai-emphasis
                                    :background ,sonokai-background
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :background ,sonokai-256-background
-                                        :weight bold))))
+                                       :background ,sonokai-256-background
+                                       :weight bold))))
 
    `(hi-blue-b
      ((,sonokai-class (:foreground ,sonokai-blue-lc
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-blue-lc
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(hi-green-b
      ((,sonokai-class (:foreground ,sonokai-green-lc
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-green-lc
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(hi-red-b
      ((,sonokai-class (:foreground ,sonokai-red
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                   :weight bold))))
+                                       :weight bold))))
 
    `(hi-black-hb
      ((,sonokai-class (:foreground ,sonokai-emphasis
                                    :background ,sonokai-background
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :background ,sonokai-256-background
-                                        :weight bold))))
+                                       :background ,sonokai-256-background
+                                       :weight bold))))
 
    ;; highlight-changes
    `(highlight-changes
@@ -3108,7 +3112,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-red
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :underline t))))
+                                       :underline t))))
 
    ;; highlight-indentation
    `(highlight-indentation-face
@@ -3138,15 +3142,15 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight normal))))
+                                       :weight normal))))
 
    `(ido-only-match
      ((,sonokai-class (:foreground ,sonokai-background
                                    :background ,sonokai-yellow
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-background
-                                        :background ,sonokai-256-yellow
-                                        :weight normal))))
+                                       :background ,sonokai-256-yellow
+                                       :weight normal))))
 
    `(ido-subdir
      ((,sonokai-class (:foreground ,sonokai-blue))
@@ -3156,15 +3160,15 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-red
                                    :weight bold ))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :weight bold ))))
+                                       :weight bold ))))
 
    `(ido-indicator
      ((,sonokai-class (:background ,sonokai-red
                                    :foreground ,sonokai-background
                                    :width condensed))
       (,sonokai-256-class (:background ,sonokai-256-red
-                                        :foreground ,sonokai-256-background
-                                        :width condensed))))
+                                       :foreground ,sonokai-256-background
+                                       :width condensed))))
 
    `(ido-virtual
      ((,sonokai-class (:foreground ,sonokai-cyan))
@@ -3176,8 +3180,8 @@ Also affects 'linum-mode' background."
                                    :inherit bold
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :inherit bold
-                                        :underline t))))
+                                       :inherit bold
+                                       :underline t))))
 
    `(info-menu
      ((,sonokai-class (:foreground ,sonokai-blue))
@@ -3187,7 +3191,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-violet
                                    :inherit bold))
       (,sonokai-256-class (:foreground ,sonokai-256-violet
-                                        :inherit bold))))
+                                       :inherit bold))))
 
    `(info-quoted-name
      ((,sonokai-class (:foreground ,sonokai-orange))
@@ -3198,8 +3202,8 @@ Also affects 'linum-mode' background."
                                    :underline t
                                    :inherit bold))
       (,sonokai-256-class (:background nil
-                                        :underline t
-                                        :inherit bold))))
+                                       :underline t
+                                       :inherit bold))))
 
    `(info-string
      ((,sonokai-class (:foreground ,sonokai-yellow))
@@ -3234,19 +3238,19 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-violet
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-violet
-                                        :underline t))))
+                                       :underline t))))
 
    `(ivy-minibuffer-match-face-3
      ((,sonokai-class (:foreground ,sonokai-green
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :underline t))))
+                                       :underline t))))
 
    `(ivy-minibuffer-match-face-4
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :underline t))))
+                                       :underline t))))
 
    `(ivy-remote
      ((,sonokai-class (:foreground ,sonokai-blue))
@@ -3272,37 +3276,37 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:weight bold
                                :foreground ,sonokai-red))
       (,sonokai-256-class (:weight bold
-                                    :foreground ,sonokai-256-red))))
+                                   :foreground ,sonokai-256-red))))
 
    `(jabber-activity-personal-face
      ((,sonokai-class (:weight bold
                                :foreground ,sonokai-blue))
       (,sonokai-256-class (:weight bold
-                                    :foreground ,sonokai-256-blue))))
+                                   :foreground ,sonokai-256-blue))))
 
    `(jabber-chat-error
      ((,sonokai-class (:weight bold
                                :foreground ,sonokai-red))
       (,sonokai-256-class (:weight bold
-                                    :foreground ,sonokai-256-red))))
+                                   :foreground ,sonokai-256-red))))
 
    `(jabber-chat-prompt-foreign
      ((,sonokai-class (:weight bold
                                :foreground ,sonokai-red))
       (,sonokai-256-class (:weight bold
-                                    :foreground ,sonokai-256-red))))
+                                   :foreground ,sonokai-256-red))))
 
    `(jabber-chat-prompt-local
      ((,sonokai-class (:weight bold
                                :foreground ,sonokai-blue))
       (,sonokai-256-class (:weight bold
-                                    :foreground ,sonokai-256-blue))))
+                                   :foreground ,sonokai-256-blue))))
 
    `(jabber-chat-prompt-system
      ((,sonokai-class (:weight bold
                                :foreground ,sonokai-green))
       (,sonokai-256-class (:weight bold
-                                    :foreground ,sonokai-256-green))))
+                                   :foreground ,sonokai-256-green))))
 
    `(jabber-chat-text-foreign
      ((,sonokai-class (:foreground ,sonokai-comments))
@@ -3316,33 +3320,33 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:underline t
                                   :foreground ,sonokai-green))
       (,sonokai-256-class (:underline t
-                                       :foreground ,sonokai-256-green))))
+                                      :foreground ,sonokai-256-green))))
 
    `(jabber-roster-user-away
      ((,sonokai-class (:slant italic
                               :foreground ,sonokai-green))
       (,sonokai-256-class (:slant italic
-                                   :foreground ,sonokai-256-green))))
+                                  :foreground ,sonokai-256-green))))
 
    `(jabber-roster-user-chatty
      ((,sonokai-class (:weight bold
                                :foreground ,sonokai-orange))
       (,sonokai-256-class (:weight bold
-                                    :foreground ,sonokai-256-orange))))
+                                   :foreground ,sonokai-256-orange))))
 
    `(jabber-roster-user-dnd
      ((,sonokai-class (:slant italic
                               :foreground ,sonokai-red))
       (,sonokai-256-class (:slant italic
-                                   :foreground ,sonokai-256-red))))
+                                  :foreground ,sonokai-256-red))))
 
    `(jabber-roster-user-error
      ((,sonokai-class (:weight light
                                :slant italic
                                :foreground ,sonokai-red))
       (,sonokai-256-class (:weight light
-                                    :slant italic
-                                    :foreground ,sonokai-256-red))))
+                                   :slant italic
+                                   :foreground ,sonokai-256-red))))
 
    `(jabber-roster-user-offline
      ((,sonokai-class (:foreground ,sonokai-comments))
@@ -3352,13 +3356,13 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:weight bold
                                :foreground ,sonokai-blue))
       (,sonokai-256-class (:weight bold
-                                    :foreground ,sonokai-256-blue))))
+                                   :foreground ,sonokai-256-blue))))
 
    `(jabber-roster-user-xa
      ((,sonokai-class (:slant italic
                               :foreground ,sonokai-magenta))
       (,sonokai-256-class (:slant italic
-                                   :foreground ,sonokai-256-magenta))))
+                                  :foreground ,sonokai-256-magenta))))
 
    ;; js2-mode colors
    `(js2-error
@@ -3429,41 +3433,41 @@ Also affects 'linum-mode' background."
    ;; linum-mode
    `(linum
      ((,sonokai-class (:inherit default
-				:foreground ,sonokai-line-number
-				:background ,sonokai-fringe-bg
-				:underline nil))
+                                :foreground ,sonokai-line-number
+                                :background ,sonokai-fringe-bg
+                                :underline nil))
       (,sonokai-256-class (:inherit default
-				    :foreground ,sonokai-256-line-number
-				    :background ,sonokai-256-fringe-bg
-				    :underline nil))))
+                                    :foreground ,sonokai-256-line-number
+                                    :background ,sonokai-256-fringe-bg
+                                    :underline nil))))
 
    ;; line-number (>= Emacs26)
    `(line-number
      ((,sonokai-class (:foreground ,sonokai-line-number
-				   :background ,sonokai-fringe-bg
-				   :underline nil))
+                                   :background ,sonokai-fringe-bg
+                                   :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-line-number
-				       :background ,sonokai-256-fringe-bg
-				       :underline nil))))
+                                       :background ,sonokai-256-fringe-bg
+                                       :underline nil))))
 
    `(line-number-current-line
      ((,sonokai-class (:foreground ,sonokai-orange
-				   :background ,sonokai-fringe-bg
-				   :underline nil))
+                                   :background ,sonokai-fringe-bg
+                                   :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-orange
-				       :background ,sonokai-256-fringe-bg
-				       :underline nil))))
+                                       :background ,sonokai-256-fringe-bg
+                                       :underline nil))))
 
    ;; linum-relative-current-face
    `(linum-relative-current-face
      ((,sonokai-class (:inherit default
-				:foreground ,sonokai-orange
-				:background ,sonokai-fringe-bg
-				:underline nil))
+                                :foreground ,sonokai-orange
+                                :background ,sonokai-fringe-bg
+                                :underline nil))
       (,sonokai-256-class (:inherit default
-				    :foreground ,sonokai-256-orange
-				    :background ,sonokai-256-fringe-bg
-				    :underline nil))))
+                                    :foreground ,sonokai-256-orange
+                                    :background ,sonokai-256-fringe-bg
+                                    :underline nil))))
 
    ;; lsp-mode
    `(lsp-ui-doc-header
@@ -3491,7 +3495,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-cyan
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-cyan
-                                        :weight bold))))
+                                       :weight bold))))
 
    ;; magit
    `(magit-bisect-good
@@ -3516,7 +3520,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:inherit magit-diff-file-heading-highlight
                                 :foreground ,sonokai-orange-d))
       (,sonokai-256-class (:inherit magit-diff-file-heading-highlight
-                                   :foreground ,sonokai-256-orange-d))))
+                                    :foreground ,sonokai-256-orange-d))))
 
    `(magit-diff-hunk-heading
      ((,sonokai-class (:foreground ,sonokai-gray-d
@@ -3548,7 +3552,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-green
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(magit-diff-removed
      ((,sonokai-class (:foreground ,sonokai-red
@@ -3570,13 +3574,13 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-green
                                    :background ,sonokai-highlight-alt))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :background ,sonokai-256-highlight-alt))))
+                                       :background ,sonokai-256-highlight-alt))))
 
    `(magit-diff-removed-highlight
      ((,sonokai-class (:foreground ,sonokai-red
                                    :background ,sonokai-highlight-alt))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :background ,sonokai-256-highlight-alt))))
+                                       :background ,sonokai-256-highlight-alt))))
 
    `(magit-diff-base-highlight
      ((,sonokai-class (:foreground ,sonokai-yellow
@@ -3759,7 +3763,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(Man-reverse
      ((,sonokai-class (:foreground ,sonokai-orange))
@@ -3774,7 +3778,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(monky-diff-add
      ((,sonokai-class (:foreground ,sonokai-green))
@@ -3793,25 +3797,25 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:inherit markdown-header-face
                                 :height ,sonokai-height-plus-4))
       (,sonokai-256-class (:inherit markdown-header-face
-                                     :height ,sonokai-height-plus-4))))
+                                    :height ,sonokai-height-plus-4))))
 
    `(markdown-header-face-2
      ((,sonokai-class (:inherit markdown-header-face
                                 :height ,sonokai-height-plus-3))
       (,sonokai-256-class (:inherit markdown-header-face
-                                     :height ,sonokai-height-plus-3))))
+                                    :height ,sonokai-height-plus-3))))
 
    `(markdown-header-face-3
      ((,sonokai-class (:inherit markdown-header-face
                                 :height ,sonokai-height-plus-2))
       (,sonokai-256-class (:inherit markdown-header-face
-                                     :height ,sonokai-height-plus-2))))
+                                    :height ,sonokai-height-plus-2))))
 
    `(markdown-header-face-4
      ((,sonokai-class (:inherit markdown-header-face
                                 :height ,sonokai-height-plus-1))
       (,sonokai-256-class (:inherit markdown-header-face
-                                     :height ,sonokai-height-plus-1))))
+                                    :height ,sonokai-height-plus-1))))
 
    `(markdown-header-face-5
      ((,sonokai-class (:inherit markdown-header-face))
@@ -3834,31 +3838,31 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-foreground
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                        :weight normal))))
+                                       :weight normal))))
 
    `(message-header-to
      ((,sonokai-class (:foreground ,sonokai-foreground
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                        :weight normal))))
+                                       :weight normal))))
 
    `(message-header-cc
      ((,sonokai-class (:foreground ,sonokai-foreground
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                        :weight normal))))
+                                       :weight normal))))
 
    `(message-header-newsgroups
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(message-header-subject
      ((,sonokai-class (:foreground ,sonokai-cyan
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-cyan
-                                        :weight normal))))
+                                       :weight normal))))
 
    `(message-header-xheader
      ((,sonokai-class (:foreground ,sonokai-cyan))
@@ -3868,13 +3872,13 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(message-separator
      ((,sonokai-class (:foreground ,sonokai-comments
                                    :slant italic))
       (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                        :slant italic))))
+                                       :slant italic))))
 
    ;; mew
    `(mew-face-header-subject
@@ -3909,7 +3913,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-foreground
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(mew-face-header-warning
      ((,sonokai-class (:foreground ,sonokai-red))
@@ -3931,7 +3935,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-foreground
                                    :slant italic))
       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                        :slant italic))))
+                                       :slant italic))))
 
    `(mew-face-body-cite1
      ((,sonokai-class (:foreground ,sonokai-green))
@@ -4053,14 +4057,14 @@ Also affects 'linum-mode' background."
                                    :background ,sonokai-background
                                    :slant italic))
       (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                        :background ,sonokai-256-background
-                                        :slant italic))))
+                                       :background ,sonokai-256-background
+                                       :slant italic))))
 
    `(moccur-edit-face
      ((,sonokai-class (:background ,sonokai-yellow
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-yellow
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(moccur-edit-file-face
      ((,sonokai-class (:background ,sonokai-highlight-line))
@@ -4075,24 +4079,24 @@ Also affects 'linum-mode' background."
                                    :foreground ,sonokai-emphasis
                                    :weight bold))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-emphasis
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-emphasis
+                                       :weight bold))))
 
    `(search-buffers-face
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-emphasis
                                    :weight bold))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-emphasis
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-emphasis
+                                       :weight bold))))
 
    `(search-buffers-header-face
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-yellow
                                    :weight bold))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-yellow
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-yellow
+                                       :weight bold))))
 
    ;; mu4e
    `(mu4e-cited-1-face
@@ -4100,76 +4104,76 @@ Also affects 'linum-mode' background."
                                    :slant italic
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :slant italic
-                                        :weight normal))))
+                                       :slant italic
+                                       :weight normal))))
 
    `(mu4e-cited-2-face
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :slant italic
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :slant italic
-                                        :weight normal))))
+                                       :slant italic
+                                       :weight normal))))
 
    `(mu4e-cited-3-face
      ((,sonokai-class (:foreground ,sonokai-orange
                                    :slant italic
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-orange
-                                        :slant italic
-                                        :weight normal))))
+                                       :slant italic
+                                       :weight normal))))
 
    `(mu4e-cited-4-face
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :slant italic
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :slant italic
-                                        :weight normal))))
+                                       :slant italic
+                                       :weight normal))))
 
    `(mu4e-cited-5-face
      ((,sonokai-class (:foreground ,sonokai-cyan
                                    :slant italic
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-cyan
-                                        :slant italic
-                                        :weight normal))))
+                                       :slant italic
+                                       :weight normal))))
 
    `(mu4e-cited-6-face
      ((,sonokai-class (:foreground ,sonokai-green
                                    :slant italic
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :slant italic
-                                        :weight normal))))
+                                       :slant italic
+                                       :weight normal))))
 
    `(mu4e-cited-7-face
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :slant italic
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :slant italic
-                                        :weight normal))))
+                                       :slant italic
+                                       :weight normal))))
 
    `(mu4e-flagged-face
      ((,sonokai-class (:foreground ,sonokai-magenta
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-magenta
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(mu4e-view-url-number-face
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight normal))))
+                                       :weight normal))))
 
    `(mu4e-warning-face
      ((,sonokai-class (:foreground ,sonokai-red
                                    :slant normal
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :slant normal
-                                        :weight bold))))
+                                       :slant normal
+                                       :weight bold))))
 
    `(mu4e-header-highlight-face
      ((,sonokai-class (:inherit unspecified
@@ -4178,10 +4182,10 @@ Also affects 'linum-mode' background."
                                 :underline ,sonokai-emphasis
                                 :weight normal))
       (,sonokai-256-class (:inherit unspecified
-                                     :foreground unspecified
-                                     :background ,sonokai-256-highlight-line
-                                     :underline ,sonokai-256-emphasis
-                                     :weight normal))))
+                                    :foreground unspecified
+                                    :background ,sonokai-256-highlight-line
+                                    :underline ,sonokai-256-emphasis
+                                    :weight normal))))
 
 
    `(mu4e-draft-face
@@ -4196,7 +4200,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:inherit font-lock-builtin-face
                                 :weight normal))
       (,sonokai-256-class (:inherit font-lock-builtin-face
-                                     :weight normal))))
+                                    :weight normal))))
 
    `(mu4e-header-face
      ((,sonokai-class (:inherit default))
@@ -4214,77 +4218,77 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:inherit font-lock-pseudo-keyword-face
                                 :weight bold))
       (,sonokai-256-class (:inherit font-lock-pseudo-keyword-face
-                                     :weight bold))))
+                                    :weight bold))))
 
    `(mu4e-moved-face
      ((,sonokai-class (:inherit font-lock-comment-face
                                 :slant italic))
       (,sonokai-256-class (:inherit font-lock-comment-face
-                                     :slant italic))))
+                                    :slant italic))))
 
    `(mu4e-ok-face
      ((,sonokai-class (:inherit font-lock-comment-face
                                 :slant normal
                                 :weight bold))
       (,sonokai-256-class (:inherit font-lock-comment-face
-                                     :slant normal
-                                     :weight bold))))
+                                    :slant normal
+                                    :weight bold))))
 
    `(mu4e-replied-face
      ((,sonokai-class (:inherit font-lock-builtin-face
                                 :weight normal))
       (,sonokai-256-class (:inherit font-lock-builtin-face
-                                     :weight normal))))
+                                    :weight normal))))
 
    `(mu4e-system-face
      ((,sonokai-class (:inherit font-lock-comment-face
                                 :slant italic))
       (,sonokai-256-class (:inherit font-lock-comment-face
-                                     :slant italic))))
+                                    :slant italic))))
 
    `(mu4e-title-face
      ((,sonokai-class (:inherit font-lock-type-face
                                 :weight bold))
       (,sonokai-256-class (:inherit font-lock-type-face
-                                     :weight bold))))
+                                    :weight bold))))
 
    `(mu4e-trashed-face
      ((,sonokai-class (:inherit font-lock-comment-face
                                 :strike-through t))
       (,sonokai-256-class (:inherit font-lock-comment-face
-                                     :strike-through t))))
+                                    :strike-through t))))
 
    `(mu4e-unread-face
      ((,sonokai-class (:inherit font-lock-keyword-face
                                 :weight bold))
       (,sonokai-256-class (:inherit font-lock-keyword-face
-                                     :weight bold))))
+                                    :weight bold))))
 
    `(mu4e-view-attach-number-face
      ((,sonokai-class (:inherit font-lock-variable-name-face
                                 :weight bold))
       (,sonokai-256-class (:inherit font-lock-variable-name-face
-                                     :weight bold))))
+                                    :weight bold))))
 
    `(mu4e-view-contact-face
      ((,sonokai-class (:foreground ,sonokai-foreground
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                        :weight normal))))
+                                       :weight normal))))
 
    `(mu4e-view-header-key-face
      ((,sonokai-class (:inherit message-header-name
                                 :weight normal))
       (,sonokai-256-class (:inherit message-header-name
-                                     :weight normal))))
+                                    :weight normal))))
 
    `(mu4e-view-header-value-face
      ((,sonokai-class (:foreground ,sonokai-cyan
                                    :weight normal
                                    :slant normal))
       (,sonokai-256-class (:foreground ,sonokai-256-cyan
-                                        :weight normal
-                                        :slant normal))))
+                                       :weight normal
+                                       :slant normal))))
 
    `(mu4e-view-link-face
      ((,sonokai-class (:inherit link))
@@ -4295,8 +4299,8 @@ Also affects 'linum-mode' background."
                                    :weight normal
                                    :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :weight normal
-                                        :underline nil))))
+                                       :weight normal
+                                       :underline nil))))
 
    ;; mumamo
    `(mumamo-background-chunk-submode1
@@ -4339,26 +4343,26 @@ Also affects 'linum-mode' background."
                                    :background ,sonokai-background
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :background ,sonokai-256-background
-                                        :weight bold))))
+                                       :background ,sonokai-256-background
+                                       :weight bold))))
 
 
    `(neo-header-face
      ((,sonokai-class (:foreground ,sonokai-emphasis
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(neo-root-dir-face
      ((,sonokai-class (:foreground ,sonokai-green
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(neo-dir-link-face
      ((,sonokai-class (:foreground ,sonokai-blue))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(neo-file-link-face
      ((,sonokai-class (:foreground ,sonokai-foreground))
@@ -4380,7 +4384,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-red
                                    :slant italic))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :slant italic))))
+                                       :slant italic))))
 
    `(neo-vc-up-to-date-face
      ((,sonokai-class (:foreground ,sonokai-comments))
@@ -4402,7 +4406,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-red
                                    :background ,sonokai-comments))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :background ,sonokai-256-comments))))
+                                       :background ,sonokai-256-comments))))
 
    `(neo-vc-added-face
      ((,sonokai-class (:foreground ,sonokai-green))
@@ -4433,7 +4437,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-blue-hc
                                    :background ,sonokai-blue-lc))
       (,sonokai-256-class (:foreground ,sonokai-256-blue-hc
-                                        :background ,sonokai-256-blue-lc))))
+                                       :background ,sonokai-256-blue-lc))))
 
    `(markup-verbatim-face
      ((,sonokai-class (:background ,sonokai-orange-lc))
@@ -4443,7 +4447,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-violet-hc
                                    :background ,sonokai-violet-lc))
       (,sonokai-256-class (:foreground ,sonokai-256-violet-hc
-                                        :background ,sonokai-256-violet-lc))))
+                                       :background ,sonokai-256-violet-lc))))
 
    `(markup-replacement-face
      ((,sonokai-class (:foreground ,sonokai-violet))
@@ -4453,7 +4457,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-violet-hc
                                    :background ,sonokai-violet-lc))
       (,sonokai-256-class (:foreground ,sonokai-256-violet-hc
-                                        :background ,sonokai-256-violet-lc))))
+                                       :background ,sonokai-256-violet-lc))))
 
    `(markup-gen-face
      ((,sonokai-class (:foreground ,sonokai-blue))
@@ -4474,13 +4478,13 @@ Also affects 'linum-mode' background."
                                    :underline nil
                                    :box (:line-width 2 :color ,sonokai-background)))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :background ,sonokai-256-highlight-line
-                                        :weight bold
-                                        :slant normal
-                                        :inverse-video nil
-                                        :height ,sonokai-height-plus-1
-                                        :underline nil
-                                        :box (:line-width 2 :color ,sonokai-256-background)))))
+                                       :background ,sonokai-256-highlight-line
+                                       :weight bold
+                                       :slant normal
+                                       :inverse-video nil
+                                       :height ,sonokai-height-plus-1
+                                       :underline nil
+                                       :box (:line-width 2 :color ,sonokai-256-background)))))
 
    `(org-agenda-calendar-event
      ((,sonokai-class (:foreground ,sonokai-emphasis))
@@ -4490,7 +4494,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-foreground
                                    :slant italic))
       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                        :slant italic))))
+                                       :slant italic))))
 
    `(org-agenda-date
      ((,sonokai-class (:foreground ,sonokai-comments
@@ -4502,13 +4506,13 @@ Also affects 'linum-mode' background."
                                    :height 1.0
                                    :box (:line-width 2 :color ,sonokai-background)))
       (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                        :background ,sonokai-256-background
-                                        :weight normal
-                                        :inverse-video nil
-                                        :overline nil
-                                        :slant normal
-                                        :height 1.0
-                                        :box (:line-width 2 :color ,sonokai-256-background)))) t)
+                                       :background ,sonokai-256-background
+                                       :weight normal
+                                       :inverse-video nil
+                                       :overline nil
+                                       :slant normal
+                                       :height 1.0
+                                       :box (:line-width 2 :color ,sonokai-256-background)))) t)
 
    `(org-agenda-date-weekend
      ((,sonokai-class (:inherit org-agenda-date
@@ -4520,13 +4524,13 @@ Also affects 'linum-mode' background."
                                 :overline nil
                                 :box unspecified))
       (,sonokai-256-class (:inherit org-agenda-date
-                                     :inverse-video nil
-                                     :background unspecified
-                                     :foreground ,sonokai-256-comments
-                                     :weight unspecified
-                                     :underline t
-                                     :overline nil
-                                     :box unspecified))) t)
+                                    :inverse-video nil
+                                    :background unspecified
+                                    :foreground ,sonokai-256-comments
+                                    :weight unspecified
+                                    :underline t
+                                    :overline nil
+                                    :box unspecified))) t)
 
    `(org-agenda-date-today
      ((,sonokai-class (:inherit org-agenda-date
@@ -4538,31 +4542,31 @@ Also affects 'linum-mode' background."
                                 :foreground ,sonokai-blue
                                 :background ,sonokai-background))
       (,sonokai-256-class (:inherit org-agenda-date
-                                     :inverse-video t
-                                     :weight bold
-                                     :underline unspecified
-                                     :overline nil
-                                     :box unspecified
-                                     :foreground ,sonokai-256-blue
-                                     :background ,sonokai-256-background))) t)
+                                    :inverse-video t
+                                    :weight bold
+                                    :underline unspecified
+                                    :overline nil
+                                    :box unspecified
+                                    :foreground ,sonokai-256-blue
+                                    :background ,sonokai-256-background))) t)
 
    `(org-agenda-done
      ((,sonokai-class (:foreground ,sonokai-comments
                                    :slant italic))
       (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                        :slant italic))) t)
+                                       :slant italic))) t)
 
    `(org-archived
      ((,sonokai-class (:foreground ,sonokai-comments
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                        :weight normal))))
+                                       :weight normal))))
 
    `(org-block
      ((,sonokai-class (:foreground ,sonokai-emphasis
                                    :background ,sonokai-highlight-alt))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :background ,sonokai-256-highlight-alt))))
+                                       :background ,sonokai-256-highlight-alt))))
 
    `(org-block-background
      ((,sonokai-class (:background ,sonokai-highlight-alt))
@@ -4573,24 +4577,24 @@ Also affects 'linum-mode' background."
                                    :background ,sonokai-gray-d
                                    :slant italic))
       (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                        :background ,sonokai-256-gray-d
-                                        :slant italic))))
+                                       :background ,sonokai-256-gray-d
+                                       :slant italic))))
 
    `(org-block-end-line
      ((,sonokai-class (:foreground ,sonokai-comments
                                    :background ,sonokai-gray-d
                                    :slant italic))
       (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                        :background ,sonokai-256-gray-d
-                                        :slant italic))))
+                                       :background ,sonokai-256-gray-d
+                                       :slant italic))))
 
    `(org-checkbox
      ((,sonokai-class (:background ,sonokai-background
                                    :foreground ,sonokai-foreground
                                    :box (:line-width 1 :style released-button)))
       (,sonokai-256-class (:background ,sonokai-256-background
-                                        :foreground ,sonokai-256-foreground
-                                        :box (:line-width 1 :style released-button)))))
+                                       :foreground ,sonokai-256-foreground
+                                       :box (:line-width 1 :style released-button)))))
 
    `(org-code
      ((,sonokai-class (:foreground ,sonokai-comments))
@@ -4600,13 +4604,13 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :underline t))))
+                                       :underline t))))
 
    `(org-done
      ((,sonokai-class (:weight bold
                                :foreground ,sonokai-green))
       (,sonokai-256-class (:weight bold
-                                    :foreground ,sonokai-256-green))))
+                                   :foreground ,sonokai-256-green))))
 
    `(org-ellipsis
      ((,sonokai-class (:foreground ,sonokai-comments))
@@ -4629,62 +4633,62 @@ Also affects 'linum-mode' background."
                                 :height ,sonokai-height-plus-4
                                 :foreground ,sonokai-orange))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :height ,sonokai-height-plus-4
-                                     :foreground ,sonokai-256-orange))))
+                                    :height ,sonokai-height-plus-4
+                                    :foreground ,sonokai-256-orange))))
 
    `(org-level-2
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :height ,sonokai-height-plus-3
                                 :foreground ,sonokai-green))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :height ,sonokai-height-plus-3
-                                     :foreground ,sonokai-256-green))))
+                                    :height ,sonokai-height-plus-3
+                                    :foreground ,sonokai-256-green))))
 
    `(org-level-3
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :height ,sonokai-height-plus-2
                                 :foreground ,sonokai-blue))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :height ,sonokai-height-plus-2
-                                     :foreground ,sonokai-256-blue))))
+                                    :height ,sonokai-height-plus-2
+                                    :foreground ,sonokai-256-blue))))
 
    `(org-level-4
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :height ,sonokai-height-plus-1
                                 :foreground ,sonokai-yellow))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :height ,sonokai-height-plus-1
-                                     :foreground ,sonokai-256-yellow))))
+                                    :height ,sonokai-height-plus-1
+                                    :foreground ,sonokai-256-yellow))))
 
    `(org-level-5
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :foreground ,sonokai-cyan))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :foreground ,sonokai-256-cyan))))
+                                    :foreground ,sonokai-256-cyan))))
 
    `(org-level-6
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :foreground ,sonokai-green))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :foreground ,sonokai-256-green))))
+                                    :foreground ,sonokai-256-green))))
 
    `(org-level-7
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :foreground ,sonokai-red))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :foreground ,sonokai-256-red))))
+                                    :foreground ,sonokai-256-red))))
 
    `(org-level-8
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :foreground ,sonokai-blue))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :foreground ,sonokai-256-blue))))
+                                    :foreground ,sonokai-256-blue))))
 
    `(org-link
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :underline t))))
+                                       :underline t))))
 
    `(org-sexp-date
      ((,sonokai-class (:foreground ,sonokai-violet))
@@ -4702,13 +4706,13 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :weight normal))))
+                                       :weight normal))))
 
    `(org-special-keyword
      ((,sonokai-class (:foreground ,sonokai-comments
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(org-table
      ((,sonokai-class (:foreground ,sonokai-green))
@@ -4726,30 +4730,30 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-red
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(org-upcoming-deadline
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight normal
                                    :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight normal
-                                        :underline nil))))
+                                       :weight normal
+                                       :underline nil))))
 
    `(org-warning
      ((,sonokai-class (:foreground ,sonokai-orange
                                    :weight normal
                                    :underline nil))
       (,sonokai-256-class (:foreground ,sonokai-256-orange
-                                        :weight normal
-                                        :underline nil))))
+                                       :weight normal
+                                       :underline nil))))
 
    ;; org-habit (clear=blue, ready=green, alert=yellow, overdue=red. future=lower contrast)
    `(org-habit-clear-face
      ((,sonokai-class (:background ,sonokai-blue-lc
                                    :foreground ,sonokai-blue-hc))
       (,sonokai-256-class (:background ,sonokai-256-blue-lc
-                                        :foreground ,sonokai-256-blue-hc))))
+                                       :foreground ,sonokai-256-blue-hc))))
 
    `(org-habit-clear-future-face
      ((,sonokai-class (:background ,sonokai-blue-lc))
@@ -4759,7 +4763,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:background ,sonokai-green-lc
                                    :foreground ,sonokai-green))
       (,sonokai-256-class (:background ,sonokai-256-green-lc
-                                        :foreground ,sonokai-256-green))))
+                                       :foreground ,sonokai-256-green))))
 
    `(org-habit-ready-future-face
      ((,sonokai-class (:background ,sonokai-green-lc))
@@ -4769,7 +4773,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:background ,sonokai-yellow
                                    :foreground ,sonokai-yellow-lc))
       (,sonokai-256-class (:background ,sonokai-256-yellow
-                                        :foreground ,sonokai-256-yellow-lc))))
+                                       :foreground ,sonokai-256-yellow-lc))))
 
    `(org-habit-alert-future-face
      ((,sonokai-class (:background ,sonokai-yellow-lc))
@@ -4779,7 +4783,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:background ,sonokai-red
                                    :foreground ,sonokai-red-lc))
       (,sonokai-256-class (:background ,sonokai-256-red
-                                        :foreground ,sonokai-256-red-lc))))
+                                       :foreground ,sonokai-256-red-lc))))
 
    `(org-habit-overdue-future-face
      ((,sonokai-class (:background ,sonokai-red-lc))
@@ -4806,25 +4810,25 @@ Also affects 'linum-mode' background."
                                    :weight normal
                                    :inherit default))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :strike-through nil
-                                        :underline nil
-                                        :slant normal
-                                        :weight normal
-                                        :inherit default))))
+                                       :strike-through nil
+                                       :underline nil
+                                       :slant normal
+                                       :weight normal
+                                       :inherit default))))
 
    `(org-column-title
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :underline t
                                    :weight bold))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :underline t
-                                        :weight bold))))
+                                       :underline t
+                                       :weight bold))))
 
    `(org-date-selected
      ((,sonokai-class (:foreground ,sonokai-red
                                    :inverse-video t))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :inverse-video t))))
+                                       :inverse-video t))))
 
    `(org-document-info
      ((,sonokai-class (:foreground ,sonokai-foreground))
@@ -4835,8 +4839,8 @@ Also affects 'linum-mode' background."
                                    :weight bold
                                    :height ,sonokai-height-plus-4))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :weight bold
-                                        :height ,sonokai-height-plus-4))))
+                                       :weight bold
+                                       :height ,sonokai-height-plus-4))))
 
    `(org-drawer
      ((,sonokai-class (:foreground ,sonokai-cyan))
@@ -4846,7 +4850,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-magenta
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-magenta
-                                        :underline t))))
+                                       :underline t))))
 
    `(org-latex-and-export-specials
      ((,sonokai-class (:foreground ,sonokai-orange))
@@ -4903,14 +4907,14 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight normal))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight normal))))
+                                       :weight normal))))
 
    ;; popup
    `(popup-face
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-foreground))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-foreground))))
+                                       :foreground ,sonokai-256-foreground))))
 
    `(popup-isearch-match
      ((,sonokai-class (:background ,sonokai-green))
@@ -4920,19 +4924,19 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-foreground))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-foreground))))
+                                       :foreground ,sonokai-256-foreground))))
 
    `(popup-menu-mouse-face
      ((,sonokai-class (:background ,sonokai-blue
                                    :foreground ,sonokai-foreground))
       (,sonokai-256-class (:background ,sonokai-256-blue
-                                        :foreground ,sonokai-256-foreground))))
+                                       :foreground ,sonokai-256-foreground))))
 
    `(popup-menu-selection-face
      ((,sonokai-class (:background ,sonokai-magenta
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-magenta
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(popup-scroll-bar-background-face
      ((,sonokai-class (:background ,sonokai-comments))
@@ -4946,7 +4950,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-foreground))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-foreground))))
+                                       :foreground ,sonokai-256-foreground))))
 
    ;; rainbow-delimiters
    `(rainbow-delimiters-depth-1-face
@@ -5002,8 +5006,8 @@ Also affects 'linum-mode' background."
                                    :background ,sonokai-background
                                    :inverse-video t))
       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                        :background ,sonokai-256-background
-                                        :inverse-video t))))
+                                       :background ,sonokai-256-background
+                                       :inverse-video t))))
 
    ;; realgud
    `(realgud-overlay-arrow1
@@ -5049,86 +5053,86 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-emphasis
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(erb-delim-face
      ((,sonokai-class (:foreground ,sonokai-cyan
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-cyan
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(erb-exec-face
      ((,sonokai-class (:foreground ,sonokai-emphasis
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(erb-exec-delim-face
      ((,sonokai-class (:foreground ,sonokai-cyan
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-cyan
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(erb-out-face
      ((,sonokai-class (:foreground ,sonokai-emphasis
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(erb-out-delim-face
      ((,sonokai-class (:foreground ,sonokai-cyan
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-cyan
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(erb-comment-face
      ((,sonokai-class (:foreground ,sonokai-emphasis
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(erb-comment-delim-face
      ((,sonokai-class (:foreground ,sonokai-cyan
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-cyan
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    ;; rst-mode
    `(rst-level-1-face
      ((,sonokai-class (:background ,sonokai-yellow
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-yellow
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(rst-level-2-face
      ((,sonokai-class (:background ,sonokai-cyan
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-cyan
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(rst-level-3-face
      ((,sonokai-class (:background ,sonokai-blue
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-blue
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(rst-level-4-face
      ((,sonokai-class (:background ,sonokai-violet
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-violet
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(rst-level-5-face
      ((,sonokai-class (:background ,sonokai-magenta
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-magenta
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    `(rst-level-6-face
      ((,sonokai-class (:background ,sonokai-red
                                    :foreground ,sonokai-background))
       (,sonokai-256-class (:background ,sonokai-256-red
-                                        :foreground ,sonokai-256-background))))
+                                       :foreground ,sonokai-256-background))))
 
    ;; rpm-mode
    `(rpm-spec-dir-face
@@ -5172,19 +5176,19 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-violet
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-violet
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(sh-escaped-newline
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(sh-heredoc
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :weight bold))))
+                                       :weight bold))))
 
    ;; smartparens
    `(sp-pair-overlay-face
@@ -5209,9 +5213,9 @@ Also affects 'linum-mode' background."
                                    :weight normal
                                    :inverse-video t))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :background ,sonokai-256-background
-                                        :weight normal
-                                        :inverse-video t))))
+                                       :background ,sonokai-256-background
+                                       :weight normal
+                                       :inverse-video t))))
 
    `(sp-show-pair-mismatch-face
      ((,sonokai-class (:foreground ,sonokai-red
@@ -5219,9 +5223,9 @@ Also affects 'linum-mode' background."
                                    :weight normal
                                    :inverse-video t))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :background ,sonokai-256-background
-                                        :weight normal
-                                        :inverse-video t))))
+                                       :background ,sonokai-256-background
+                                       :weight normal
+                                       :inverse-video t))))
 
    ;; show-paren
    `(show-paren-match
@@ -5230,9 +5234,9 @@ Also affects 'linum-mode' background."
                                    :weight normal
                                    :inverse-video t))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :background ,sonokai-256-background
-                                        :weight normal
-                                        :inverse-video t))))
+                                       :background ,sonokai-256-background
+                                       :weight normal
+                                       :inverse-video t))))
 
    `(show-paren-mismatch
      ((,sonokai-class (:foreground ,sonokai-red
@@ -5240,9 +5244,9 @@ Also affects 'linum-mode' background."
                                    :weight normal
                                    :inverse-video t))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :background ,sonokai-256-background
-                                        :weight normal
-                                        :inverse-video t))))
+                                       :background ,sonokai-256-background
+                                       :weight normal
+                                       :inverse-video t))))
 
    ;; mic-paren
    `(paren-face-match
@@ -5251,9 +5255,9 @@ Also affects 'linum-mode' background."
                                    :weight normal
                                    :inverse-video t))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :background ,sonokai-256-background
-                                        :weight normal
-                                        :inverse-video t))))
+                                       :background ,sonokai-256-background
+                                       :weight normal
+                                       :inverse-video t))))
 
    `(paren-face-mismatch
      ((,sonokai-class (:foreground ,sonokai-red
@@ -5261,9 +5265,9 @@ Also affects 'linum-mode' background."
                                    :weight normal
                                    :inverse-video t))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :background ,sonokai-256-background
-                                        :weight normal
-                                        :inverse-video t))))
+                                       :background ,sonokai-256-background
+                                       :weight normal
+                                       :inverse-video t))))
 
    `(paren-face-no-match
      ((,sonokai-class (:foreground ,sonokai-red
@@ -5271,9 +5275,9 @@ Also affects 'linum-mode' background."
                                    :weight normal
                                    :inverse-video t))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :background ,sonokai-256-background
-                                        :weight normal
-                                        :inverse-video t))))
+                                       :background ,sonokai-256-background
+                                       :weight normal
+                                       :inverse-video t))))
 
    ;; SLIME
    `(slime-repl-inputed-output-face
@@ -5282,58 +5286,58 @@ Also affects 'linum-mode' background."
 
    ;; smerge
    `(smerge-base
-      ((,sonokai-class (:background ,sonokai-diff-blue-base))
-        (,sonokai-256-class (:background ,sonokai-256-diff-blue-base))))
+     ((,sonokai-class (:background ,sonokai-diff-blue-base))
+      (,sonokai-256-class (:background ,sonokai-256-diff-blue-base))))
    `(smerge-upper
-      ((,sonokai-class (:background ,sonokai-diff-red-base))
-        (,sonokai-256-class (:background ,sonokai-256-diff-red-base))))
+     ((,sonokai-class (:background ,sonokai-diff-red-base))
+      (,sonokai-256-class (:background ,sonokai-256-diff-red-base))))
    `(smerge-lower
-      ((,sonokai-class (:background ,sonokai-diff-green-base))
-        (,sonokai-256-class (:background ,sonokai-256-diff-green-base))))
+     ((,sonokai-class (:background ,sonokai-diff-green-base))
+      (,sonokai-256-class (:background ,sonokai-256-diff-green-base))))
    ;; WARNING: defining this face will overwrite the next two when displaying a
    ;; smerge diff in a file.
    ;; `(smerge-refined-changed
    ;;    ((,sonokai-class (:background ,sonokai-diff-blue-emphasis))
    ;;      (,sonokai-256-class (:background ,sonokai-256-diff-blue-emphasis))))
    `(smerge-refined-added
-      ((,sonokai-class (:background ,sonokai-diff-green-emphasis))
-        (,sonokai-256-class (:background ,sonokai-256-diff-green-emphasis))))
+     ((,sonokai-class (:background ,sonokai-diff-green-emphasis))
+      (,sonokai-256-class (:background ,sonokai-256-diff-green-emphasis))))
    `(smerge-refined-removed
-      ((,sonokai-class (:background ,sonokai-diff-red-emphasis))
-        (,sonokai-256-class (:background ,sonokai-256-diff-red-emphasis))))
+     ((,sonokai-class (:background ,sonokai-diff-red-emphasis))
+      (,sonokai-256-class (:background ,sonokai-256-diff-red-emphasis))))
 
    ;; speedbar
    `(speedbar-button-face
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :foreground ,sonokai-comments))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :foreground ,sonokai-256-comments))))
+                                    :foreground ,sonokai-256-comments))))
 
    `(speedbar-directory-face
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :foreground ,sonokai-blue))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :foreground ,sonokai-256-blue))))
+                                    :foreground ,sonokai-256-blue))))
 
    `(speedbar-file-face
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :foreground ,sonokai-foreground))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :foreground ,sonokai-256-foreground))))
+                                    :foreground ,sonokai-256-foreground))))
 
    `(speedbar-highlight-face
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :background ,sonokai-highlight-line))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :background ,sonokai-256-highlight-line))))
+                                    :background ,sonokai-256-highlight-line))))
 
    `(speedbar-selected-face
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :foreground ,sonokai-yellow
                                 :underline t))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :foreground ,sonokai-256-yellow
-                                     :underline t))))
+                                    :foreground ,sonokai-256-yellow
+                                    :underline t))))
 
    `(speedbar-separator-face
      ((,sonokai-class (:inherit ,sonokai-pitch
@@ -5341,15 +5345,15 @@ Also affects 'linum-mode' background."
                                 :foreground ,sonokai-background
                                 :overline ,sonokai-cyan-lc))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :background ,sonokai-256-blue
-                                     :foreground ,sonokai-256-background
-                                     :overline ,sonokai-256-cyan-lc))))
+                                    :background ,sonokai-256-blue
+                                    :foreground ,sonokai-256-background
+                                    :overline ,sonokai-256-cyan-lc))))
 
    `(speedbar-tag-face
      ((,sonokai-class (:inherit ,sonokai-pitch
                                 :foreground ,sonokai-green))
       (,sonokai-256-class (:inherit ,sonokai-pitch
-                                     :foreground ,sonokai-256-green))))
+                                    :foreground ,sonokai-256-green))))
 
    ;; sunrise commander headings
    `(sr-active-path-face
@@ -5358,9 +5362,9 @@ Also affects 'linum-mode' background."
                                    :height ,sonokai-height-plus-1
                                    :weight bold))
       (,sonokai-256-class (:background ,sonokai-256-blue
-                                        :foreground ,sonokai-256-background
-                                        :height ,sonokai-height-plus-1
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-background
+                                       :height ,sonokai-height-plus-1
+                                       :weight bold))))
 
    `(sr-editing-path-face
      ((,sonokai-class (:background ,sonokai-yellow
@@ -5368,9 +5372,9 @@ Also affects 'linum-mode' background."
                                    :weight bold
                                    :height ,sonokai-height-plus-1))
       (,sonokai-256-class (:background ,sonokai-256-yellow
-                                        :foreground ,sonokai-256-background
-                                        :weight bold
-                                        :height ,sonokai-height-plus-1))))
+                                       :foreground ,sonokai-256-background
+                                       :weight bold
+                                       :height ,sonokai-height-plus-1))))
 
    `(sr-highlight-path-face
      ((,sonokai-class (:background ,sonokai-green
@@ -5378,9 +5382,9 @@ Also affects 'linum-mode' background."
                                    :weight bold
                                    :height ,sonokai-height-plus-1))
       (,sonokai-256-class (:background ,sonokai-256-green
-                                        :foreground ,sonokai-256-background
-                                        :weight bold
-                                        :height ,sonokai-height-plus-1))))
+                                       :foreground ,sonokai-256-background
+                                       :weight bold
+                                       :height ,sonokai-height-plus-1))))
 
    `(sr-passive-path-face
      ((,sonokai-class (:background ,sonokai-comments
@@ -5388,9 +5392,9 @@ Also affects 'linum-mode' background."
                                    :weight bold
                                    :height ,sonokai-height-plus-1))
       (,sonokai-256-class (:background ,sonokai-256-comments
-                                        :foreground ,sonokai-256-background
-                                        :weight bold
-                                        :height ,sonokai-height-plus-1))))
+                                       :foreground ,sonokai-256-background
+                                       :weight bold
+                                       :height ,sonokai-height-plus-1))))
 
    ;; sunrise commander marked
    `(sr-marked-dir-face
@@ -5406,47 +5410,47 @@ Also affects 'linum-mode' background."
                                    :foreground ,sonokai-background
                                    :weight bold))
       (,sonokai-256-class (:background ,sonokai-256-magenta
-                                        :foreground ,sonokai-256-background
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-background
+                                       :weight bold))))
 
    `(sr-alt-marked-file-face
      ((,sonokai-class (:background ,sonokai-magenta
                                    :foreground ,sonokai-background
                                    :weight bold))
       (,sonokai-256-class (:background ,sonokai-256-magenta
-                                        :foreground ,sonokai-256-background
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-background
+                                       :weight bold))))
 
    ;; sunrise commander fstat
    `(sr-directory-face
      ((,sonokai-class (:inherit disonokai-red-directory
                                 :weight normal))
       (,sonokai-256-class (:inherit disonokai-red-directory
-                                     :weight normal))))
+                                    :weight normal))))
 
    `(sr-symlink-directory-face
      ((,sonokai-class (:inherit disonokai-red-directory
                                 :slant italic
                                 :weight normal))
       (,sonokai-256-class (:inherit disonokai-red-directory
-                                     :slant italic
-                                     :weight normal))))
+                                    :slant italic
+                                    :weight normal))))
 
    `(sr-symlink-face
      ((,sonokai-class (:inherit disonokai-red-symlink
                                 :slant italic
                                 :weight normal))
       (,sonokai-256-class (:inherit disonokai-red-symlink
-                                     :slant italic
-                                     :weight normal))))
+                                    :slant italic
+                                    :weight normal))))
 
    `(sr-broken-link-face
      ((,sonokai-class (:inherit disonokai-red-warning
                                 :slant italic
                                 :weight normal))
       (,sonokai-256-class (:inherit disonokai-red-warning
-                                     :slant italic
-                                     :weight normal))))
+                                    :slant italic
+                                    :weight normal))))
 
    ;; sunrise commander file types
    `(sr-compressed-face
@@ -5479,115 +5483,115 @@ Also affects 'linum-mode' background."
                                    :foreground ,sonokai-background
                                    :weight bold))
       (,sonokai-256-class (:background ,sonokai-256-red
-                                        :foreground ,sonokai-256-background
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-background
+                                       :weight bold))))
 
    ;; syslog-mode
    `(syslog-ip-face
      ((,sonokai-class (:background unspecified
                                    :foreground ,sonokai-yellow))
       (,sonokai-256-class (:background unspecified
-                                        :foreground ,sonokai-256-yellow))))
+                                       :foreground ,sonokai-256-yellow))))
 
    `(syslog-hour-face
      ((,sonokai-class (:background unspecified
                                    :foreground ,sonokai-green))
       (,sonokai-256-class (:background unspecified
-                                        :foreground ,sonokai-256-green))))
+                                       :foreground ,sonokai-256-green))))
 
    `(syslog-error-face
      ((,sonokai-class (:background unspecified
                                    :foreground ,sonokai-red
                                    :weight bold))
       (,sonokai-256-class (:background unspecified
-                                        :foreground ,sonokai-256-red
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-red
+                                       :weight bold))))
 
    `(syslog-warn-face
      ((,sonokai-class (:background unspecified
                                    :foreground ,sonokai-orange
                                    :weight bold))
       (,sonokai-256-class (:background unspecified
-                                        :foreground ,sonokai-256-orange
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-orange
+                                       :weight bold))))
 
    `(syslog-info-face
      ((,sonokai-class (:background unspecified
                                    :foreground ,sonokai-blue
                                    :weight bold))
       (,sonokai-256-class (:background unspecified
-                                        :foreground ,sonokai-256-blue
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-blue
+                                       :weight bold))))
 
    `(syslog-debug-face
      ((,sonokai-class (:background unspecified
                                    :foreground ,sonokai-cyan
                                    :weight bold))
       (,sonokai-256-class (:background unspecified
-                                        :foreground ,sonokai-256-cyan
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-cyan
+                                       :weight bold))))
 
    `(syslog-su-face
      ((,sonokai-class (:background unspecified
                                    :foreground ,sonokai-magenta))
       (,sonokai-256-class (:background unspecified
-                                        :foreground ,sonokai-256-magenta))))
+                                       :foreground ,sonokai-256-magenta))))
 
    ;; table
    `(table-cell
      ((,sonokai-class (:foreground ,sonokai-foreground
                                    :background ,sonokai-highlight-line))
       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                        :background ,sonokai-256-highlight-line))))
+                                       :background ,sonokai-256-highlight-line))))
 
    ;; term
    `(term-color-black
      ((,sonokai-class (:foreground ,sonokai-gray
                                    :background ,sonokai-gray-d))
       (,sonokai-256-class (:foreground ,sonokai-256-gray
-                                        :background ,sonokai-256-gray-d))))
+                                       :background ,sonokai-256-gray-d))))
 
    `(term-color-red
      ((,sonokai-class (:foreground ,sonokai-red
                                    :background ,sonokai-red-d))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :background ,sonokai-256-red-d))))
+                                       :background ,sonokai-256-red-d))))
 
    `(term-color-green
      ((,sonokai-class (:foreground ,sonokai-green
                                    :background ,sonokai-green-d))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :background ,sonokai-256-green-d))))
+                                       :background ,sonokai-256-green-d))))
 
    `(term-color-yellow
      ((,sonokai-class (:foreground ,sonokai-yellow
                                    :background ,sonokai-yellow-d))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :background ,sonokai-256-yellow-d))))
+                                       :background ,sonokai-256-yellow-d))))
 
    `(term-color-blue
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :background ,sonokai-blue-d))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :background ,sonokai-256-blue-d))))
+                                       :background ,sonokai-256-blue-d))))
 
    `(term-color-magenta
      ((,sonokai-class (:foreground ,sonokai-magenta
                                    :background ,sonokai-magenta-d))
       (,sonokai-256-class (:foreground ,sonokai-256-magenta
-                                        :background ,sonokai-256-magenta-d))))
+                                       :background ,sonokai-256-magenta-d))))
 
    `(term-color-cyan
      ((,sonokai-class (:foreground ,sonokai-cyan
                                    :background ,sonokai-cyan-d))
       (,sonokai-256-class (:foreground ,sonokai-256-cyan
-                                        :background ,sonokai-256-cyan-d))))
+                                       :background ,sonokai-256-cyan-d))))
 
    `(term-color-white
      ((,sonokai-class (:foreground ,sonokai-emphasis
                                    :background ,sonokai-foreground))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :background ,sonokai-256-foreground))))
+                                       :background ,sonokai-256-foreground))))
 
    `(term-default-fg-color
      ((,sonokai-class (:inherit term-color-white))
@@ -5606,73 +5610,73 @@ Also affects 'linum-mode' background."
 
    ;; treemacs
    `(treemacs-directory-face
-      ((,sonokai-class (:foreground ,sonokai-violet
-                         :background ,sonokai-background
-                         :weight bold))
-        (,sonokai-256-class (:foreground ,sonokai-256-violet
-                              :background ,sonokai-256-background
-                              :weight bold))))
+     ((,sonokai-class (:foreground ,sonokai-violet
+                                   :background ,sonokai-background
+                                   :weight bold))
+      (,sonokai-256-class (:foreground ,sonokai-256-violet
+                                       :background ,sonokai-256-background
+                                       :weight bold))))
 
    `(treemacs-header-face
-      ((,sonokai-class (:foreground ,sonokai-yellow
-                         :background ,sonokai-background
-                         :underline t
-                         :weight bold))
-        (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                              :background ,sonokai-256-background
-                              :underline t
-                              :weight bold))))
+     ((,sonokai-class (:foreground ,sonokai-yellow
+                                   :background ,sonokai-background
+                                   :underline t
+                                   :weight bold))
+      (,sonokai-256-class (:foreground ,sonokai-256-yellow
+                                       :background ,sonokai-256-background
+                                       :underline t
+                                       :weight bold))))
 
    `(treemacs-git-modified-face
-      ((,sonokai-class (:foreground ,sonokai-green
-                         :background ,sonokai-background))
-        (,sonokai-256-class (:foreground ,sonokai-256-green
-                              :background ,sonokai-256-background))))
+     ((,sonokai-class (:foreground ,sonokai-green
+                                   :background ,sonokai-background))
+      (,sonokai-256-class (:foreground ,sonokai-256-green
+                                       :background ,sonokai-256-background))))
 
    `(treemacs-git-renamed-face
-      ((,sonokai-class (:foreground ,sonokai-red
-                         :background ,sonokai-background))
-        (,sonokai-256-class (:foreground ,sonokai-256-red
-                              :background ,sonokai-256-background))))
+     ((,sonokai-class (:foreground ,sonokai-red
+                                   :background ,sonokai-background))
+      (,sonokai-256-class (:foreground ,sonokai-256-red
+                                       :background ,sonokai-256-background))))
 
    `(treemacs-git-ignored-face
-      ((,sonokai-class (:foreground ,sonokai-gray-l
-                         :background ,sonokai-background))
-        (,sonokai-256-class (:foreground ,sonokai-256-gray-l
-                              :background ,sonokai-256-background))))
+     ((,sonokai-class (:foreground ,sonokai-gray-l
+                                   :background ,sonokai-background))
+      (,sonokai-256-class (:foreground ,sonokai-256-gray-l
+                                       :background ,sonokai-256-background))))
 
    `(treemacs-git-untracked-face
-      ((,sonokai-class (:foreground ,sonokai-red
-                         :background ,sonokai-background))
-        (,sonokai-256-class (:foreground ,sonokai-256-red
-                              :background ,sonokai-256-background))))
+     ((,sonokai-class (:foreground ,sonokai-red
+                                   :background ,sonokai-background))
+      (,sonokai-256-class (:foreground ,sonokai-256-red
+                                       :background ,sonokai-256-background))))
 
    `(treemacs-git-added-face
-      ((,sonokai-class (:foreground ,sonokai-green
-                         :background ,sonokai-background))
-        (,sonokai-256-class (:foreground ,sonokai-256-green
-                              :background ,sonokai-256-background))))
+     ((,sonokai-class (:foreground ,sonokai-green
+                                   :background ,sonokai-background))
+      (,sonokai-256-class (:foreground ,sonokai-256-green
+                                       :background ,sonokai-256-background))))
 
    `(treemacs-git-conflict-face
-      ((,sonokai-class (:foreground ,sonokai-orange
-                         :background ,sonokai-background))
-        (,sonokai-256-class (:foreground ,sonokai-256-orange
-                              :background ,sonokai-256-background))))
+     ((,sonokai-class (:foreground ,sonokai-orange
+                                   :background ,sonokai-background))
+      (,sonokai-256-class (:foreground ,sonokai-256-orange
+                                       :background ,sonokai-256-background))))
 
    ;; tuareg
    `(tuareg-font-lock-governing-face
      ((,sonokai-class (:foreground ,sonokai-magenta
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-magenta
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(tuareg-font-lock-multistage-face
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :background ,sonokai-highlight-line
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :background ,sonokai-256-highlight-line
-                                        :weight bold))))
+                                       :background ,sonokai-256-highlight-line
+                                       :weight bold))))
 
    `(tuareg-font-lock-operator-face
      ((,sonokai-class (:foreground ,sonokai-emphasis))
@@ -5683,8 +5687,8 @@ Also affects 'linum-mode' background."
                                    :background ,sonokai-red
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :background ,sonokai-256-red
-                                        :weight bold))))
+                                       :background ,sonokai-256-red
+                                       :weight bold))))
 
    `(tuareg-font-lock-interactive-output-face
      ((,sonokai-class (:foreground ,sonokai-cyan))
@@ -5699,7 +5703,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-comments
                                    :background ,sonokai-background))
       (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                        :background ,sonokai-256-background))))
+                                       :background ,sonokai-256-background))))
 
    `(undo-tree-visualizer-unmodified-face
      ((,sonokai-class (:foreground ,sonokai-green))
@@ -5709,15 +5713,15 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-blue
                                    :inverse-video t))
       (,sonokai-256-class (:foreground ,sonokai-256-blue
-                                        :inverse-video t))))
+                                       :inverse-video t))))
 
    `(undo-tree-visualizer-active-branch-face
      ((,sonokai-class (:foreground ,sonokai-emphasis
                                    :background ,sonokai-background
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :background ,sonokai-256-background
-                                        :weight bold))))
+                                       :background ,sonokai-256-background
+                                       :weight bold))))
 
    `(undo-tree-visualizer-register-face
      ((,sonokai-class (:foreground ,sonokai-yellow))
@@ -5725,8 +5729,8 @@ Also affects 'linum-mode' background."
 
    ;; volatile highlights
    `(vhl/default-face
-      ((,sonokai-class (:background ,sonokai-highlight-alt))
-        (,sonokai-256-class (:background ,sonokai-256-highlight-alt))))
+     ((,sonokai-class (:background ,sonokai-highlight-alt))
+      (,sonokai-256-class (:background ,sonokai-256-highlight-alt))))
 
    ;; w3m
    `(w3m-anchor
@@ -5741,40 +5745,40 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:background ,sonokai-background
                                    :foreground ,sonokai-foreground))
       (,sonokai-256-class (:background ,sonokai-256-background
-                                        :foreground ,sonokai-256-foreground))))
+                                       :foreground ,sonokai-256-foreground))))
 
    `(w3m-header-line-location-title
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-yellow))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-yellow))))
+                                       :foreground ,sonokai-256-yellow))))
 
    `(w3m-header-line-location-content
 
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-foreground))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-foreground))))
+                                       :foreground ,sonokai-256-foreground))))
 
    `(w3m-bold
      ((,sonokai-class (:foreground ,sonokai-emphasis
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(w3m-image-anchor
      ((,sonokai-class (:background ,sonokai-background
                                    :foreground ,sonokai-cyan
                                    :inherit link))
       (,sonokai-256-class (:background ,sonokai-256-background
-                                        :foreground ,sonokai-256-cyan
-                                        :inherit link))))
+                                       :foreground ,sonokai-256-cyan
+                                       :inherit link))))
 
    `(w3m-image
      ((,sonokai-class (:background ,sonokai-background
                                    :foreground ,sonokai-cyan))
       (,sonokai-256-class (:background ,sonokai-256-background
-                                        :foreground ,sonokai-256-cyan))))
+                                       :foreground ,sonokai-256-cyan))))
 
    `(w3m-lnum-minibuffer-prompt
      ((,sonokai-class (:foreground ,sonokai-emphasis))
@@ -5789,8 +5793,8 @@ Also affects 'linum-mode' background."
                                   :bold nil
                                   :foreground ,sonokai-red))
       (,sonokai-256-class (:underline nil
-                                       :bold nil
-                                       :foreground ,sonokai-256-red))))
+                                      :bold nil
+                                      :foreground ,sonokai-256-red))))
 
    `(w3m-session-select
      ((,sonokai-class (:foreground ,sonokai-foreground))
@@ -5801,58 +5805,58 @@ Also affects 'linum-mode' background."
                                    :bold t
                                    :underline t))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :bold t
-                                        :underline t))))
+                                       :bold t
+                                       :underline t))))
 
    `(w3m-tab-background
      ((,sonokai-class (:background ,sonokai-background
                                    :foreground ,sonokai-foreground))
       (,sonokai-256-class (:background ,sonokai-256-background
-                                        :foreground ,sonokai-256-foreground))))
+                                       :foreground ,sonokai-256-foreground))))
 
    `(w3m-tab-selected-background
      ((,sonokai-class (:background ,sonokai-background
                                    :foreground ,sonokai-foreground))
       (,sonokai-256-class (:background ,sonokai-256-background
-                                        :foreground ,sonokai-256-foreground))))
+                                       :foreground ,sonokai-256-foreground))))
 
    `(w3m-tab-mouse
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-yellow))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-yellow))))
+                                       :foreground ,sonokai-256-yellow))))
 
    `(w3m-tab-selected
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-emphasis
                                    :bold t))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-emphasis
-                                        :bold t))))
+                                       :foreground ,sonokai-256-emphasis
+                                       :bold t))))
 
    `(w3m-tab-unselected
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-foreground))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-foreground))))
+                                       :foreground ,sonokai-256-foreground))))
 
    `(w3m-tab-selected-retrieving
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-red))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-red))))
+                                       :foreground ,sonokai-256-red))))
 
    `(w3m-tab-unselected-retrieving
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-orange))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-orange))))
+                                       :foreground ,sonokai-256-orange))))
 
    `(w3m-tab-unselected-unseen
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :foreground ,sonokai-violet))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :foreground ,sonokai-256-violet))))
+                                       :foreground ,sonokai-256-violet))))
 
    ;; web-mode
    `(web-mode-builtin-face
@@ -5872,16 +5876,16 @@ Also affects 'linum-mode' background."
                                   :weight unspecified
                                   :background ,sonokai-highlight-line))
       (,sonokai-256-class (:underline unspecified
-                                       :weight unspecified
-                                       :background ,sonokai-256-highlight-line))))
+                                      :weight unspecified
+                                      :background ,sonokai-256-highlight-line))))
 
    `(web-mode-doctype-face
      ((,sonokai-class (:foreground ,sonokai-comments
                                    :slant italic
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                        :slant italic
-                                        :weight bold))))
+                                       :slant italic
+                                       :weight bold))))
 
    `(web-mode-folded-face
      ((,sonokai-class (:underline t))
@@ -5928,8 +5932,8 @@ Also affects 'linum-mode' background."
                                    :slant normal
                                    :weight unspecified))
       (,sonokai-256-class (:foreground ,sonokai-256-yellow
-                                        :slant normal
-                                        :weight unspecified))))
+                                       :slant normal
+                                       :weight unspecified))))
 
    `(web-mode-string-face
      ((,sonokai-class (:foreground ,sonokai-yellow))
@@ -6062,17 +6066,17 @@ Also affects 'linum-mode' background."
                                    :inverse-video unspecified
                                    :slant italic))
       (,sonokai-256-class (:background unspecified
-                                        :foreground ,sonokai-256-comments
-                                        :inverse-video unspecified
-                                        :slant italic))))
+                                       :foreground ,sonokai-256-comments
+                                       :inverse-video unspecified
+                                       :slant italic))))
 
    `(whitespace-hspace
      ((,sonokai-class (:background unspecified
                                    :foreground ,sonokai-emphasis
                                    :inverse-video unspecified))
       (,sonokai-256-class (:background unspecified
-                                        :foreground ,sonokai-256-emphasis
-                                        :inverse-video unspecified))))
+                                       :foreground ,sonokai-256-emphasis
+                                       :inverse-video unspecified))))
 
    `(whitespace-tab
      ((,sonokai-class (:background unspecified
@@ -6080,9 +6084,9 @@ Also affects 'linum-mode' background."
                                    :inverse-video unspecified
                                    :weight bold))
       (,sonokai-256-class (:background unspecified
-                                        :foreground ,sonokai-256-red
-                                        :inverse-video unspecified
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-red
+                                       :inverse-video unspecified
+                                       :weight bold))))
 
    `(whitespace-newline
      ((,sonokai-class(:background unspecified
@@ -6097,24 +6101,24 @@ Also affects 'linum-mode' background."
                                    :foreground ,sonokai-orange-lc
                                    :inverse-video t))
       (,sonokai-256-class (:background unspecified
-                                        :foreground ,sonokai-256-orange-lc
-                                        :inverse-video t))))
+                                       :foreground ,sonokai-256-orange-lc
+                                       :inverse-video t))))
 
    `(whitespace-line
      ((,sonokai-class (:background unspecified
                                    :foreground ,sonokai-magenta
                                    :inverse-video unspecified))
       (,sonokai-256-class (:background unspecified
-                                        :foreground ,sonokai-256-magenta
-                                        :inverse-video unspecified))))
+                                       :foreground ,sonokai-256-magenta
+                                       :inverse-video unspecified))))
 
    `(whitespace-space-before-tab
      ((,sonokai-class (:background ,sonokai-red-lc
                                    :foreground unspecified
                                    :inverse-video unspecified))
       (,sonokai-256-class (:background ,sonokai-256-red-lc
-                                        :foreground unspecified
-                                        :inverse-video unspecified))))
+                                       :foreground unspecified
+                                       :inverse-video unspecified))))
 
    `(whitespace-indentation
      ((,sonokai-class (:background unspecified
@@ -6122,17 +6126,17 @@ Also affects 'linum-mode' background."
                                    :inverse-video unspecified
                                    :weight bold))
       (,sonokai-256-class (:background unspecified
-                                        :foreground ,sonokai-256-yellow
-                                        :inverse-video unspecified
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-yellow
+                                       :inverse-video unspecified
+                                       :weight bold))))
 
    `(whitespace-empty
      ((,sonokai-class (:background unspecified
                                    :foreground ,sonokai-red-lc
                                    :inverse-video t))
       (,sonokai-256-class (:background unspecified
-                                        :foreground ,sonokai-256-red-lc
-                                        :inverse-video t))))
+                                       :foreground ,sonokai-256-red-lc
+                                       :inverse-video t))))
 
    `(whitespace-space-after-tab
      ((,sonokai-class (:background unspecified
@@ -6140,9 +6144,9 @@ Also affects 'linum-mode' background."
                                    :inverse-video t
                                    :weight bold))
       (,sonokai-256-class (:background unspecified
-                                        :foreground ,sonokai-256-orange
-                                        :inverse-video t
-                                        :weight bold))))
+                                       :foreground ,sonokai-256-orange
+                                       :inverse-video t
+                                       :weight bold))))
 
    ;; wanderlust
    `(wl-highlight-folder-few-face
@@ -6225,7 +6229,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-foreground
                                    :slant italic))
       (,sonokai-256-class (:foreground ,sonokai-256-foreground
-                                        :slant italic))))
+                                       :slant italic))))
 
    `(wl-highlight-summary-new-face
      ((,sonokai-class (:foreground ,sonokai-blue))
@@ -6251,7 +6255,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:underline t
                                   :weight bold))
       (,sonokai-256-class (:underline t
-                                       :weight bold))))
+                                      :weight bold))))
 
    ;; weechat
    `(weechat-error-face
@@ -6262,15 +6266,15 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-emphasis
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(weechat-nick-self-face
      ((,sonokai-class (:foreground ,sonokai-green
                                    :weight unspecified
                                    :inverse-video t))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :weight unspecified
-                                        :inverse-video t))))
+                                       :weight unspecified
+                                       :inverse-video t))))
 
    `(weechat-prompt-face
      ((,sonokai-class (:inherit minibuffer-prompt))
@@ -6290,7 +6294,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-green
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-green
-                                        :weight bold))))
+                                       :weight bold))))
 
    `(which-key-separator-face
      ((,sonokai-class (:foreground ,sonokai-comments))
@@ -6312,7 +6316,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-red
                                    :weight bold))
       (,sonokai-256-class (:foreground ,sonokai-256-red
-                                        :weight bold))))
+                                       :weight bold))))
 
    ;; window-divider-mode
    `(window-divider
@@ -6331,20 +6335,21 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-comments
                                    :background ,sonokai-comments))
       (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                        :background ,sonokai-256-comments))))
+                                       :background ,sonokai-256-comments))))
 
    `(yascroll:thumb-fringe
      ((,sonokai-class (:foreground ,sonokai-comments
                                    :background ,sonokai-comments))
       (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                        :background ,sonokai-256-comments))))
+                                       :background ,sonokai-256-comments))))
 
    ;; zencoding
    `(zencoding-preview-input
      ((,sonokai-class (:background ,sonokai-highlight-line
                                    :box ,sonokai-emphasis))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
-                                        :box ,sonokai-256-emphasis)))))
+                                       :box ,sonokai-256-emphasis))))
+   )
 
   (custom-theme-set-variables
    'sonokai
@@ -6404,13 +6409,14 @@ Also affects 'linum-mode' background."
    ;; weechat
    `(weechat-color-list
      '(unspecified ,sonokai-background ,sonokai-highlight-line
-                  ,sonokai-red-d ,sonokai-red
-                  ,sonokai-green-d ,sonokai-green
-                  ,sonokai-yellow-d ,sonokai-yellow
-                  ,sonokai-blue-d ,sonokai-blue
-                  ,sonokai-magenta-d ,sonokai-magenta
-                  ,sonokai-cyan-d ,sonokai-cyan
-                  ,sonokai-foreground ,sonokai-emphasis))))
+                   ,sonokai-red-d ,sonokai-red
+                   ,sonokai-green-d ,sonokai-green
+                   ,sonokai-yellow-d ,sonokai-yellow
+                   ,sonokai-blue-d ,sonokai-blue
+                   ,sonokai-magenta-d ,sonokai-magenta
+                   ,sonokai-cyan-d ,sonokai-cyan
+                   ,sonokai-foreground ,sonokai-emphasis)))
+  )
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
@@ -6418,3 +6424,5 @@ Also affects 'linum-mode' background."
                (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'sonokai)
+
+;;; sonokai-theme.el ends here
