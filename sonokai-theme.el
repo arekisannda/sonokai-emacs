@@ -6349,6 +6349,53 @@ Also affects 'linum-mode' background."
                                    :box ,sonokai-emphasis))
       (,sonokai-256-class (:background ,sonokai-256-highlight-line
                                        :box ,sonokai-256-emphasis))))
+
+   ;; corfu
+   `(corfu-default
+     ((,sonokai-class (:background ,sonokai-background-d))
+      (,sonokai-256-class (:background ,sonokai-256-background-d))))
+
+   `(corfu-current
+     ((,sonokai-class (:background ,sonokai-highlight
+                                   :foreground ,sonokai-foreground))
+      (,sonokai-256-class (:background ,sonokai-256-highlight
+                                       :foreground ,sonokai-256-foreground))))
+
+   `(corfu-border
+     ((,sonokai-class (:background ,sonokai-gray))
+      (,sonokai-256-class (:background ,sonokai-256-gray))))
+
+   `(corfu-bar
+     ((,sonokai-class (:background ,sonokai-yellow))
+      (,sonokai-256-class (:background ,sonokai-256-yellow))))
+
+   ;; corfu-candidate-overlay
+   `(corfu-candidate-overlay-face
+     ((,sonokai-class (:foreground ,sonokai-gray-d))
+      (,sonokai-256-class (:foreground ,sonokai-256-gray-d))))
+
+   `(corfu-candidate-overlay-face-exact-match
+     ((,sonokai-class (:foreground ,sonokai-white-d))
+      (,sonokai-256-class (:foreground, sonokai-256-white-d))))
+
+   ;; mozc-posframe
+   `(mozc-cand-posframe-normal-face
+     ((,sonokai-class (:background ,sonokai-background-d
+                                   :foreground ,sonokai-foreground))
+      (,sonokai-256-class (:background ,sonokai-256-background-d
+                                       :foreground ,sonokai-foreground))))
+
+   `(mozc-cand-posframe-focused-face
+     ((,sonokai-class (:background ,sonokai-highlight
+                                   :foreground ,sonokai-foreground))
+      (,sonokai-256-class (:background ,sonokai-256-highlight
+                                       :foreground ,sonokai-256-foreground))))
+
+   `(mozc-cand-posframe-footer-face
+     ((,sonokai-class (:inherit mozc-cand-posframe-normal-face
+                                :foreground ,sonokai-yellow))
+      (,sonokai-256-class (:inherit mozc-cand-posframe-normal-face
+                                    :foreground ,sonokai-256-yellow))))
    )
 
   (custom-theme-set-variables
