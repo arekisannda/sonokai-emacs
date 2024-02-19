@@ -6396,6 +6396,10 @@ Also affects 'linum-mode' background."
                                 :foreground ,sonokai-yellow))
       (,sonokai-256-class (:inherit mozc-cand-posframe-normal-face
                                     :foreground ,sonokai-256-yellow))))
+
+   `(mozc-cand-posframe-border-face
+     ((,sonokai-class (:background ,sonokai-gray))
+      (,sonokai-256-class (:background ,sonokai-256-gray))))
    )
 
   (custom-theme-set-variables
