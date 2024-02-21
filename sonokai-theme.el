@@ -325,6 +325,51 @@ Also affects 'linum-mode' background."
   (custom-theme-set-faces
    'sonokai
 
+   ;; base colors
+   `(yellow
+     ((,sonokai-class (:foreground ,sonokai-yellow))
+      (,sonokai-256-class (:foreground ,sonokai-256-yellow))))
+
+   `(orange
+     ((,sonokai-class (:foreground ,sonokai-orange))
+      (,sonokai-256-class (:foreground ,sonokai-256-orange))))
+
+   `(red
+     ((,sonokai-class (:foreground ,sonokai-red))
+      (,sonokai-256-class (:foreground ,sonokai-256-red))))
+
+   `(magenta
+     ((,sonokai-class (:foreground ,sonokai-magenta))
+      (,sonokai-256-class (:foreground ,sonokai-256-magenta))))
+
+   `(blue
+     ((,sonokai-class (:foreground ,sonokai-blue))
+      (,sonokai-256-class (:foreground ,sonokai-256-blue))))
+
+   `(green
+     ((,sonokai-class (:foreground ,sonokai-green))
+      (,sonokai-256-class (:foreground ,sonokai-256-green))))
+
+   `(cyan
+     ((,sonokai-class (:foreground ,sonokai-cyan))
+      (,sonokai-256-class (:foreground ,sonokai-256-cyan))))
+
+   `(violet
+     ((,sonokai-class (:foreground ,sonokai-violet))
+      (,sonokai-256-class (:foreground ,sonokai-256-violet))))
+
+   `(gray
+     ((,sonokai-class (:foreground ,sonokai-gray))
+      (,sonokai-256-class (:foreground ,sonokai-256-gray))))
+
+   `(white
+     ((,sonokai-class (:foreground ,sonokai-white))
+      (,sonokai-256-class (:foreground ,sonokai-256-white))))
+
+   `(black
+     ((,sonokai-class (:foreground ,sonokai-black))
+      (,sonokai-256-class (:foreground ,sonokai-256-black))))
+
    ;; font lock for syntax highlighting
    `(font-lock-builtin-face
      ((,sonokai-class (:foreground ,sonokai-red
