@@ -416,26 +416,40 @@ Also affects 'linum-mode' background."
    `(button ((t (:underline t))))
 
    `(tab-bar
-     ((,sonokai-class (:inherit tab-bar
-                                :background ,sonokai-background-d))
-      (,sonokai-256-class (:inherit tab-bar
-                                    :background ,sonokai-256-background-d))))
+     ((,sonokai-class (:foreground ,sonokai-foreground
+                                   :background ,sonokai-background-d))
+      (,sonokai-256-class (:foreground ,sonokai-foreground
+                                       :background ,sonokai-256-background-d))))
 
    `(tab-bar-tab
-     ((,sonokai-class (:inherit tab-bar-tab
-                                :foreground ,sonokai-yellow
-                                :background ,sonokai-background))
-      (,sonokai-256-class (:inherit tab-bar-tab
-                                    :foreground ,sonokai-256-yellow
-                                    :background ,sonokai-256-background))))
+     ((,sonokai-class (:foreground ,sonokai-foreground
+                                   :background ,sonokai-background))
+      (,sonokai-256-class (:foreground ,sonokai-256-foreground
+                                       :background ,sonokai-256-background))))
 
    `(tab-bar-tab-inactive
-     ((,sonokai-class (:inherit tab-bar-tab-inactive
-                                :foreground ,sonokai-foreground
-                                :background ,sonokai-background-d))
-      (,sonokai-256-class (:inherit tab-bar-tab-inactive
-                                    :foreground ,sonokai-256-foreground
-                                    :background ,sonokai-256-background-d))))
+     ((,sonokai-class (:foreground ,sonokai-comments
+                                   :background ,sonokai-background-d))
+      (,sonokai-256-class (:foreground ,sonokai-256-comments
+                                       :background ,sonokai-256-background-d))))
+
+   `(tab-bar-tab-group-current
+     ((,sonokai-class (:foreground ,sonokai-yellow
+                                   :background ,sonokai-background))
+      (,sonokai-256-class (:foreground ,sonokai-256-yellow
+                                       :background ,sonokai-256-background))))
+
+   `(tab-bar-tab-group-inactive
+     ((,sonokai-class (:foreground ,sonokai-comments
+                                   :background ,sonokai-background))
+      (,sonokai-256-class (:foreground ,sonokai-256-comments
+                                       :background ,sonokai-256-background))))
+
+   `(tab-bar-tab-ungrouped
+     ((,sonokai-class (:foreground ,sonokai-comments
+                                   :background ,sonokai-background))
+      (,sonokai-256-class (:foreground ,sonokai-256-comments
+                                       :background ,sonokai-256-background))))
 
    `(default
      ((,sonokai-class (:foreground ,sonokai-foreground
