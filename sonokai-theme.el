@@ -6414,6 +6414,19 @@ Also affects 'linum-mode' background."
    `(mozc-cand-posframe-border-face
      ((,sonokai-class (:background ,sonokai-gray))
       (,sonokai-256-class (:background ,sonokai-256-gray))))
+
+   ;; ext-tab-bar
+   `(ext-tab-bar-faces-debug
+     ((,sonokai-class (:background ,sonokai-red-d))
+      (,sonokai-256-class (:background ,sonokai-256-red-d))))
+
+   `(ext-tab-bar-faces-project
+     ((,sonokai-class (:background ,sonokai-green-d))
+      (,sonokai-256-class (:background ,sonokai-256-green-d))))
+
+   `(ext-tab-bar-faces-perspective
+     ((,sonokai-class (:background ,sonokai-orange-d))
+      (,sonokai-256-class (:background ,sonokai-256-orange-d))))
    )
 
   (custom-theme-set-variables
