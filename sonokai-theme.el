@@ -4587,28 +4587,28 @@ Also affects 'linum-mode' background."
       (,sonokai-256-class (:background ,sonokai-256-highlight-alt))))
 
    `(org-block-begin-line
-     ((,sonokai-class (:foreground ,sonokai-comments
-                                   :background ,sonokai-gray-d
+     ((,sonokai-class (:foreground ,sonokai-gray-l
+                                   :weight bold
                                    :slant italic))
-      (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                       :background ,sonokai-256-gray-d
+      (,sonokai-256-class (:foreground ,sonokai-256-gray-l
+                                       :weight bold
                                        :slant italic))))
 
    `(org-block-end-line
-     ((,sonokai-class (:foreground ,sonokai-comments
-                                   :background ,sonokai-gray-d
+     ((,sonokai-class (:foreground ,sonokai-gray-l
+                                   :weight bold
                                    :slant italic))
-      (,sonokai-256-class (:foreground ,sonokai-256-comments
-                                       :background ,sonokai-256-gray-d
+      (,sonokai-256-class (:foreground ,sonokai-256-gray-l
+                                       :weight bold
                                        :slant italic))))
 
    `(org-checkbox
      ((,sonokai-class (:background ,sonokai-background
                                    :foreground ,sonokai-foreground
-                                   :box (:line-width 1 :style released-button)))
+                                   :box nil))
       (,sonokai-256-class (:background ,sonokai-256-background
                                        :foreground ,sonokai-256-foreground
-                                       :box (:line-width 1 :style released-button)))))
+                                       :box nil))))
 
    `(org-code
      ((,sonokai-class (:foreground ,sonokai-comments))
@@ -4729,8 +4729,8 @@ Also affects 'linum-mode' background."
                                        :weight bold))))
 
    `(org-table
-     ((,sonokai-class (:foreground ,sonokai-green))
-      (,sonokai-256-class (:foreground ,sonokai-256-green))))
+     ((,sonokai-class (:foreground ,sonokai-white-d))
+      (,sonokai-256-class (:foreground ,sonokai-256-white-d))))
 
    `(org-tag
      ((,sonokai-class (:weight bold))
@@ -4741,9 +4741,9 @@ Also affects 'linum-mode' background."
       (,sonokai-256-class (:foreground ,sonokai-256-comments))))
 
    `(org-todo
-     ((,sonokai-class (:foreground ,sonokai-red
+     ((,sonokai-class (:foreground ,sonokai-red-d
                                    :weight bold))
-      (,sonokai-256-class (:foreground ,sonokai-256-red
+      (,sonokai-256-class (:foreground ,sonokai-256-red-d
                                        :weight bold))))
 
    `(org-upcoming-deadline
@@ -4758,7 +4758,7 @@ Also affects 'linum-mode' background."
      ((,sonokai-class (:foreground ,sonokai-orange
                                    :weight normal
                                    :underline nil))
-      (,sonokai-256-class (:foreground ,sonokai-256-orange
+      (,sonokai-256-class (:foreground ,sonokai-256-orange-d
                                        :weight normal
                                        :underline nil))))
 
