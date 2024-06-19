@@ -4564,13 +4564,13 @@ Also affects 'linum-mode' background."
 
    `(org-block
      ((,sonokai-class (:foreground ,sonokai-emphasis
-                                   :background ,sonokai-highlight-alt))
+                                   :background ,sonokai-background-d))
       (,sonokai-256-class (:foreground ,sonokai-256-emphasis
-                                       :background ,sonokai-256-highlight-alt))))
+                                       :background ,sonokai-256-background-d))))
 
    `(org-block-background
-     ((,sonokai-class (:background ,sonokai-highlight-alt))
-      (,sonokai-256-class (:background ,sonokai-256-highlight-alt))))
+     ((,sonokai-class (:background ,sonokai-background-d))
+      (,sonokai-256-class (:background ,sonokai-256-background-d))))
 
    `(org-block-begin-line
      ((,sonokai-class (:foreground ,sonokai-comments
