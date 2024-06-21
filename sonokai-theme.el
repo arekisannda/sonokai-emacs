@@ -4597,8 +4597,10 @@ Also affects 'linum-mode' background."
                                        :box (:line-width 1 :style released-button)))))
 
    `(org-code
-     ((,sonokai-class (:foreground ,sonokai-comments))
-      (,sonokai-256-class (:foreground ,sonokai-256-comments))))
+     ((,sonokai-class (:foreground ,sonokai-comments
+                                   :background ,sonokai-background-d))
+      (,sonokai-256-class (:foreground ,sonokai-256-emphasis
+                                       :background ,sonokai-256-background-d))))
 
    `(org-date
      ((,sonokai-class (:foreground ,sonokai-blue
